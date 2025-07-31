@@ -11,16 +11,6 @@ h1 {
   color: #343a40;
 }
 
-/* Carrusel */
-.carousel {
-  width: 60%;        
-  margin: 30px auto;
-  border-radius: 8px;
-  overflow: hidden;
-}
 
-.carousel img {
-  height: 300px; 
-  object-fit: cover;
-  width: 100%; 
-}
+
+
