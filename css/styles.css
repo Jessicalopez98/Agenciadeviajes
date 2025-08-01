@@ -30,9 +30,12 @@ h1{
   margin-left: 20px;
 }
 
-#descripcionProyecto{
+.container#descripcionProyecto{
   margin: auto auto auto auto;
+  flex-wrap: wrap;
+  padding: auto;
 }
+
 
 /* Estilos para el contenido principal */
 .main-content {
@@ -244,10 +247,6 @@ h1{
 
 #Jessica{
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
-}
-
-.text {
-font-size: 1.1vw;
 }
 
 
