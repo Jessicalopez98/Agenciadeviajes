@@ -1,2 +1,16 @@
 /*Hoja de estilos para proyecto integrador 
 Agencia de Viajes*/
+.navbar{
+  background-color:#27538C;
+}
+
+.nav-item{
+  font-size: 25px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  gap: 4rem;
+}
+
+.nav-item#acercaNosotras{
+  text-align: left;
+}
