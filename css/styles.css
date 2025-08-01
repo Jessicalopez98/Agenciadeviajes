@@ -11,6 +11,141 @@ h1 {
   color: #343a40;
 }
 
+/* Estilos para el contenido principal */
+.main-content {
+  min-height: 70vh;
+  padding: 2rem;
+}
 
+/* footer */
+.footer {
+  background-color: #6c757d;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
 
+.footer-logo {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.footer-logo p {
+  font-weight: bold;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-social {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 2rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.footer-contact {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.contact-item {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.contact-icon-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-links {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+/*Forma Responsiva*/
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-social,
+  .footer-contact,
+  .footer-links {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .footer-social {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+}
