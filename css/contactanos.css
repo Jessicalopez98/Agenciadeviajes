@@ -1,0 +1,20 @@
+#btnEnviar{
+    margin-top: 50px;
+    margin-block: 30px;
+    display: flex;
+    justify-content: right;
+    
+} 
+
+.btn-primary{
+    margin: 30px ;
+    border-color: #27538C;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #27538C;
+    border-radius: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+   
+}
