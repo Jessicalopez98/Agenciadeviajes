@@ -176,6 +176,11 @@ h1 {
   .footer-links {
     text-align: center;
   }
+  
+  div.container{
+        grid-template-columns: auto;
+        text-align: center;
+  }
 }
 
 .image-hover {

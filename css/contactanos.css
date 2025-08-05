@@ -18,3 +18,30 @@
     padding-right: 35px;
    
 }
+
+@media(max-width:500px){
+    div.container{
+        grid-template-columns: auto;
+        text-align: center;
+    } 
+}
+#ctcCorreo{
+    text-align: center;
+}
+
+#ctcWhats{
+    text-align: center;
+}
+#ctcEnlaces{
+    text-align: center;
+}
+
+.fa-brands fa-instagram{
+    text-align: center;
+}
+.fa-brands fa-facebook{
+    text-align: center;
+}
+.fa-brands fa-tiktok{
+    text-align: center;
+}
