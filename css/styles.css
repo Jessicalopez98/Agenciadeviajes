@@ -201,7 +201,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
+  border-radius: 120px 120px 0px 0px;
 }
 
 .text {
@@ -249,6 +249,5 @@ h1{
 .text {
 font-size: 1.1vw;
 }
-
 
 
