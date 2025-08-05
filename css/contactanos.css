@@ -45,3 +45,86 @@
 .fa-brands fa-tiktok{
     text-align: center;
 }
+
+/* Colores formulario */
+
+#iptName{
+  background-color: #98BF45;
+  border-color: #98BF45;
+}
+#iptEmail{
+  background-color: #98BF45;
+  border-color: #98BF45;
+}
+#iptTelefono{
+  background-color: #98BF45;
+  border-color: #98BF45;
+}
+
+#iptMessage{
+  background-color: #98BF45;
+  border-color: #98BF45;
+}
+
+/* Diseño header */
+
+.contact-header {
+    background-image: url('../assets/vacations.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 115px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3671BF;
+    margin-bottom: 25px;
+}
+
+.contact-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.514); /* Ajusta el 0.4 para más o menos transparencia */
+  z-index: 1;
+}
+
+.contact-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-title {
+    text-align: center;
+    color: #3671BF;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+}
+
+
+.form-label {
+    font-family: font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    color: #323232;
+    font-weight: bold;
+}
+
+#iptName{
+    width: 90%;
+}
+
+#iptEmail{
+    width: 90%;
+}
+
+#iptTelefono{
+    width: 90%;
+}
+
+#iptMessage{
+    display: block;
+    width: 90%;
+    height: 150px;
+}
