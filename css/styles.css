@@ -1,41 +1,39 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
-  color: #27538C;
+  color: #27538c;
 }
 
-.navbar{
-  background-color:#27538C;
+.navbar {
+  background-color: #27538c;
 }
 
-.nav-item{
+.nav-item {
   font-size: 25px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   gap: 4rem;
 }
 
-.nav-item#acercaNosotras{
+.nav-item#acercaNosotras {
   text-align: left;
 }
 
-h1{
+h1 {
   text-align: left;
   margin-top: 30px;
-  color: #27538C;
+  color: #27538c;
   font-size: 20px;
   margin-left: 20px;
 }
 
-.container#descripcionProyecto{
+.container#descripcionProyecto {
   margin: auto auto auto auto;
   flex-wrap: wrap;
   padding: auto;
 }
-
 
 /* Estilos para el contenido principal */
 .main-content {
@@ -44,7 +42,7 @@ h1{
 }
 
 /* footer */
-.footer{
+.footer {
   background-color: #d9d9d9;
   color: black;
   padding: 2rem 0;
@@ -184,7 +182,7 @@ h1{
   overflow: hidden;
 }
 
-.image-hover .overlay{
+.image-hover .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -195,8 +193,6 @@ h1{
   height: 0;
   overflow: hidden;
   transition: 0.5s ease;
-  
-  
 }
 
 .image-hover:hover .overlay {
@@ -213,41 +209,38 @@ h1{
   font-family: "Montserrat", sans-serif;
 }
 
-#Arlette{
+#Arlette {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
 
-#Paola{
+#Paola {
   background: rgba(161, 203, 124, 0.699); /* color oscuro semi-transparente */
 }
 
-#Samantha{
+#Samantha {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
 
-#Nadia{
+#Nadia {
   background: rgba(161, 203, 124, 0.699); /* color oscuro semi-transparente */
 }
 
-#Mayra{
+#Mayra {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
 
-#Kenia{
+#Kenia {
   background: rgba(161, 203, 124, 0.699); /* color oscuro semi-transparente */
 }
 
-#Leidi{
+#Leidi {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
 
-#Citlali{
+#Citlali {
   background: rgba(161, 203, 124, 0.699); /* color oscuro semi-transparente */
 }
 
-#Jessica{
+#Jessica {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
-
-
-
