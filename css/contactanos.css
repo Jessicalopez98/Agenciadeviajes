@@ -124,7 +124,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3671BF;
+    color: #3671BF !important;
     margin-bottom: 25px;
 }
 

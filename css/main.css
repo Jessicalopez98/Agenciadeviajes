@@ -1,7 +1,7 @@
 /*Hoja de estilos para proyecto integrador 
 Agencia de Viajes*/
 .navbar{
-  background-color:#27538C;
+  background-color:#27538C !important;
 }
 
 .nav-item{
