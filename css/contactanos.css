@@ -19,14 +19,21 @@
 .btn-primary{
     margin: 30px ;
     border-color: #27538C;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
+    font-family: "Inter", sans-serif !important;
+    font-weight: 800 !important;
     color: #ffffff;
-    background-color: #27538C;
+    background-color: #27538C !important;
     border-radius: 25px;
     padding-left: 35px;
     padding-right: 35px;
    
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #F2F2F2 !important; 
+  border-color: #A9D943 !important;
+  color: #000 !important;
 }
 
 @media(max-width:500px){
@@ -145,7 +152,7 @@ a {
 
 
 .form-label {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     font-size: 22px;
     color: #323232;
     font-weight: bold;
