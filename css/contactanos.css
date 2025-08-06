@@ -25,27 +25,48 @@
         text-align: center;
     } 
 }
-#ctcCorreo{
+#ctcCorreo {
     text-align: center;
 }
 
-#ctcWhats{
+#ctcWhats {
     text-align: center;
 }
 #ctcEnlaces{
     text-align: center;
 }
+#textoSiguenos{
+    text-align: center;
+}
+i{
+    display: flex;
+    margin: auto;
+}
+a{
+    display: block;
+    margin-bottom: auto;
+    text-align: center;
+}
+.fa-brands .fa-instagram a{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-brands .fa-facebook i{
+    margin-left: auto;
+}
+.fa-brands .fa-facebook a{
+    text-align: center;
+}
+.fa-brands .fa-tiktok a{
+    text-align: center;
+}
 
-.fa-brands fa-instagram{
+.fa-brands{
     text-align: center;
 }
-.fa-brands fa-facebook{
-    text-align: center;
-}
-.fa-brands fa-tiktok{
-    text-align: center;
-}
-
 /* Colores formulario */
 
 #iptName{
@@ -61,7 +82,7 @@
   border-color: #98BF45;
 }
 
-#iptMessage{
+#iptMensaje{
   background-color: #98BF45;
   border-color: #98BF45;
 }
@@ -105,7 +126,7 @@
 
 
 .form-label {
-    font-family: font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 22px;
     color: #323232;
     font-weight: bold;
@@ -123,8 +144,12 @@
     width: 90%;
 }
 
-#iptMessage{
+#iptMensaje{
     display: block;
     width: 90%;
     height: 150px;
+}
+
+.container i{
+    text-align: center;
 }

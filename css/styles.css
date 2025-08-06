@@ -249,3 +249,15 @@ h1 {
 #Jessica {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
+
+.navbar{
+  text-align: center;
+}
+
+a{
+  text-align: center;
+}
+
+i{
+  text-align: end;
+}
