@@ -1,37 +1,50 @@
-//Archivo Main para JaaScript Agencia de Viajes
-////// ESTA NO SE PUEDE, CREO PORQUE TENEMOS CARD IMAGE-HOVER
-// function mostrarDescripcion(id) {
-// let recuadroDescripcion = document.getElementById(id); //recuadro es igual a id div
-// if (recuadroDescripcion.style.display === "none") { //si se cumple mi condicion de que mi var recuadro.style.display ==="none"
+import { validarNombre, validarMensaje, validarTelefono, validarEmail } from "./validaciones.js";
 
-//     recuadroDescripcion.style.display = "block";      // aplica que recuadro.style.display = "block"
-//   } else {
-//     recuadroDescripcion.style.display = "none";       // si no,  aplica que recuadro.style.display = "none"
-//   }
-// }
+// Variables referidas desde el HTML
+const iptName = document.getElementById("iptName");
+const iptEmail = document.getElementById("iptEmail");
+const iptTelefono = document.getElementById("iptTelefono");
+const iptMensaje = document.getElementById("iptMensaje");
+const alertResultado = document.getElementById("alertResultado");
 
-// OTRA FORMA DE APARECER EL TEXTO ERA CON UN BOTON
+// Botón de enviar
+const btnEnviar = document.querySelector("#btnEnviar button");
 
-// AGREGAR BOTON DESPUES DE LA DESCRIPCION DEL TEXTO sea que se convierta a parrafo o se quede como div
-// O agregar el boton afuera del carrusel pero creo que sin la propiedad flex para pasar de slide
-// <button onclick="ocultarDescripcion()">Cerrar</button>
+// Orejita del botón enviar
+btnEnviar.addEventListener("click", function(event) {
+    event.preventDefault();
 
-// CSS
-//  .overlay {
-//     display: flex;
-//     position: absolute;
-//     background-color:aqua;
-//     border: 1px solid #ccc;
-//     padding: 10px;
-//     z-index: 1;
-//   }
+    // Alertas de los mensajes
+    alertResultado.classList.remove("alert-success");
+    alertResultado.classList.add("alert-danger");
 
-//  function mostrarDescripcion() {
-//      document.getElementsByClassName("overlay").style.display = "block";
-//  }
+    let mensajesError = [];
 
-//  function ocultarDescripcion() {
-//      document.getElementsByClassName("overlay").style.display = "none";
-//  }
+    // Condiciones para las Validaciones
+    if (!validarNombre(iptName.value)) {
+        mensajesError.push("El nombre debe tener al menos 3 caracteres y ser texto.");
+    }
 
-//  document.getElementsByClassName("row").addEventListener("click", mostrarDescripcion);
+    if (!validarEmail(iptEmail.value)) {
+        mensajesError.push("El correo electrónico ingresado no es válido.");
+    }
+
+    if (!validarTelefono(iptTelefono.value)) {
+        mensajesError.push("El teléfono debe contener 10 dígitos numéricos.");
+    }
+
+    if (!validarMensaje(iptMensaje.value)) {
+        mensajesError.push("El mensaje debe tener entre 1 y 150 caracteres.");
+    }
+
+    if (mensajesError.length > 0) {
+        // Mostrando errores concatenados en el div
+        alertResultado.style.display = "block"; // Mostrar el div
+        alertResultado.innerHTML = mensajesError.join("<br>");
+    } else {
+        alertResultado.style.display = "block";
+        alertResultado.classList.remove("alert-danger");
+        alertResultado.classList.add("alert-success");
+        alertResultado.innerHTML = "¡Formulario enviado correctamente!";
+    }
+});
