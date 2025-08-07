@@ -7,6 +7,7 @@ const iptTelefono = document.getElementById("iptTelefono");
 const iptMensaje = document.getElementById("iptMensaje");
 const alertResultado = document.getElementById("alertResultado");
 
+
 // Botón de enviar
 const btnEnviar = document.querySelector("#btnEnviar button");
 
@@ -48,3 +49,4 @@ btnEnviar.addEventListener("click", function(event) {
         alertResultado.innerHTML = "¡Formulario enviado correctamente!";
     }
 });
+
