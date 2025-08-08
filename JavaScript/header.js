@@ -13,14 +13,14 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
 
       <!-- Navegacion -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item" id="acercaNosotras">
+        <ul class="navbar-nav mx-auto gap-4">
+          <li class="nav-item mx-5" id="acercaNosotras">
             <a class="nav-link text-white fw-medium" href="./Acercadenosotras.html">Acerca de Nosotros</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link text-white fw-medium" href="./listaProductos.html">Paquetes</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link text-white fw-medium" href="./contactanos.html">Contáctanos</a>
           </li>
         </ul>
