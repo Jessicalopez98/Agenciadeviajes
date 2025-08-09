@@ -5,8 +5,8 @@ const iptName = document.getElementById("iptName");
 const iptEmail = document.getElementById("iptEmail");
 const iptTelefono = document.getElementById("iptTelefono");
 const iptMensaje = document.getElementById("iptMensaje");
+const checkNewsletter = document.getElementById("checkNewsletter");
 const alertResultado = document.getElementById("alertResultado");
-
 
 // Botón de enviar
 const btnEnviar = document.querySelector("#btnEnviar button");
@@ -18,6 +18,7 @@ btnEnviar.addEventListener("click", function(event) {
     // Alertas de los mensajes
     alertResultado.classList.remove("alert-success");
     alertResultado.classList.add("alert-danger");
+    alertResultado.style.display = "none"; // Oculto inicialmente
 
     let mensajesError = [];
 
@@ -31,7 +32,7 @@ btnEnviar.addEventListener("click", function(event) {
     }
 
     if (!validarTelefono(iptTelefono.value)) {
-        mensajesError.push("El teléfono debe contener 10 dígitos numéricos.");
+        mensajesError.push("El teléfono debe contener 10 dígitos numéricos y no puede ser el mismo 10 veces.");
     }
 
     if (!validarMensaje(iptMensaje.value)) {
@@ -43,10 +44,21 @@ btnEnviar.addEventListener("click", function(event) {
         alertResultado.style.display = "block"; // Mostrar el div
         alertResultado.innerHTML = mensajesError.join("<br>");
     } else {
+        // Mostrar mensaje éxito
         alertResultado.style.display = "block";
         alertResultado.classList.remove("alert-danger");
         alertResultado.classList.add("alert-success");
         alertResultado.innerHTML = "¡Formulario enviado correctamente!";
+
+        // Limpiar campos
+        iptName.value = '';
+        iptEmail.value = '';
+        iptTelefono.value = '';
+        iptMensaje.value = '';
+        checkNewsletter.checked = false;
+       setTimeout(() => location.reload(), 3000);
+
     }
 });
 
+ 

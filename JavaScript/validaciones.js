@@ -13,9 +13,17 @@ export function validarEmail(email) {
 
 export function validarTelefono(telefono) {
     const regex = /^\d{10}$/;
-    return regex.test(telefono);
+    if (!regex.test(telefono)) return false;
+
+    // Validar que no sean 10 dígitos iguales en el teléfono
+    const primerDigito = telefono[0];
+    const todosIguales = telefono.split('').every(d => d === primerDigito);
+    if (todosIguales) return false;
+
+    return true;
 }
 
 export function validarMensaje(mensaje) {
     return typeof mensaje === 'string' && mensaje.trim().length > 0 && mensaje.trim().length <= 150;
 }
+
