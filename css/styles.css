@@ -4,14 +4,14 @@ body {
   margin: 0;
   padding: 0;
   color: #27538c;
-  flex:1;
-  height: 100%;   
+  flex: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;    /* Ocupa toda la altura de la ventana */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
 }
-main{
-  flex:1;
+main {
+  flex: 1;
 }
 
 html {
@@ -188,10 +188,10 @@ h1 {
   .footer-links {
     text-align: center;
   }
-  
-  div.container{
-        grid-template-columns: auto;
-        text-align: center;
+
+  div.container {
+    grid-template-columns: auto;
+    text-align: center;
   }
 }
 
@@ -262,14 +262,37 @@ h1 {
   background: rgba(124, 138, 203, 0.699); /* color oscuro semi-transparente */
 }
 
-.navbar{
+.navbar {
   text-align: center;
 }
 
-a{
+a {
   text-align: center;
 }
 
-i{
+i {
   text-align: end;
+}
+
+/*styles card*/
+
+.card-title {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #27538c !important;
+  text-align: start;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.card {
+  border: 0px !important;
+}
+
+.card-img-top {
+  border-radius: 15px;
+  padding: 0 1.5rem;
 }
