@@ -23,6 +23,10 @@
   <!-- Link de icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -34,51 +38,58 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-sm">
-          <div class="card cold" style="width: 24rem;">
-            <img src="." class="card-img-top" alt="Imagen de destino">
-            <div class="card-body">
-              <h5 class="card-title">titulo de lugar</h5>
-              <p class="card-text">Precio</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Incluye: </li>
-              <li class="list-group-item"><i class="bi bi-airplane"></i> Vuelos</li>
-              <li class="list-group-item"><i class="bi bi-buildings"></i> Hospedaje</li>
-              <li class="list-group-item"><i class="bi bi-cup-hot"></i> Alimentos</li>
-              <li class="list-group-item"><i class="bi bi-chat-dots"></i> Guia de habla hispana</li>
-              <li class="list-group-item"><i class="bi bi-car-front"></i> Traslado</li>
-              <li class="list-group-item"><i class="bi bi-geo-alt"></i> Visitas Guiadas</li>
-            </ul>
+          <article class="card cold fondo-color-card"
+            style="width: 24rem; background-color: #f2f2f2; border-radius:15px ;">
+            <header>
+              <h5 class="card-title">Especial Egipto y Dubái</h5>
 
-            <!-- boton -->
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-                Ver mas ...
-              </button>
-            </div>
-          </div>
-         </div>
+              <img
+                src="https://one.cdnmega.com/images/viajes/covers/20277-especial-egipto-dubai-1024x575_67eb328836b4b.webp"
+                class="card-img-top" alt="Imagen de destino">
+            </header>
+            <footer-card>
+
+              <ul>
+                <li class="list-group-item">Incluye: </li>
+                <li class="list-group-item"><i class="bi bi-airplane"></i> Vuelos</li>
+                <li class="list-group-item"><i class="bi bi-buildings"></i> Hospedaje</li>
+                <li class="list-group-item"><i class="bi bi-cup-hot"></i> Alimentos</li>
+                <li class="list-group-item"><i class="bi bi-chat-dots"></i> Guia de habla hispana</li>
+                <li class="list-group-item"><i class="bi bi-car-front"></i> Traslado</li>
+                <li class="list-group-item"><i class="bi bi-geo-alt"></i> Visitas Guiadas</li>
+              </ul>
+
+              <!-- boton -->
+              <div class="card-body" style="display: flex; justify-content: end;">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+                  Reservar
+                </button>
+              </div>
+            </footer-card>
+
+          </article>
+        </div>
       </div>
 
-          <!-- modal -->
-          <div class="modal" id="modal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="./contactanos.html">
-                    <button type="button" class="btn btn-primary">Contactanos</button>
-                  </a>
-                </div>
-              </div>
+      <!-- modal -->
+      <div class="modal" id="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="./contactanos.html">
+                <button type="button" class="btn btn-primary">Contactanos</button>
+              </a>
             </div>
           </div>
+        </div>
+      </div>
     </div>
   </main>
 
