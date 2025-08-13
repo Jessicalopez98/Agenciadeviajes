@@ -1,29 +1,4 @@
 function addItem(item){
-<<<<<<< HEAD
-    const itemHTML = '<div class="card" style="width: 18rem;">\n' +
-        '    <img src="'+item.img +'" class="card-img-top" alt="image">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">'+item.titlo+'</h5>\n' +
-        '        <p class="card-text">'+item.lugares+'</p>\n' +
-        '        <p class="card-text">'+item.precio+'</p>\n' +
-        '        <p class="card-text">'+item.incluye+'</p>\n' +
-        '        <p class="card-text">'+item.duracion+'</p>\n' 
-        '        <a href="#" class="btn btn-primary">Add</a>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<br/>';
-    const itemsContainer = document.getElementById("list-items");
-    itemsContainer.innerHTML += itemHTML;
-}
-
-addItem({'id':1,
-    'titlo':'Gran Tour de Europa',
-    'img': '',
-    'lugares':'Londres, París, Luxemburgo, Frankfurt, Heidelberg, Zúrich, Lucerna, Vaduz, Innsbruck, Padua, Venecia, Florencia, Roma, Pisa, Niza, Barcelona, Zaragoza, Madrid',
-    'precio':'Desde $1,899 USD + 799 IMP Por persona en habitación Doble',
-    'incluye':'Incluye : Vuelos, Hotel, Tours, Translados',
-    'noincluye':'El viaje no incluye<br>ALIMENTOS, GASTOS DE INDOLE PERSONAL<br>NINGÚN SERVICIO NO ESPECÍFICADO.<br>TODAS LAS EXCURSIONES QUE SE MENCIONAN COMO OPCIONALES.<br>IMPUESTOS AÉREOS POR PERSONA<br>NOTA: 65 EUROS QUE CORRESPONDEN A PROPINAS PARA CHOFERES, TASAS HOTELES Y MUNICIPALES. SE PAGA EN DESTINO',
-=======
     const itemHTML = '<div class="row">\n' +
         '<div class="col-lg-3 col-sm">\n' +
           '<article class="card cold fondo-color-card"\n' +
@@ -96,41 +71,20 @@ addItem({'id':1,
     'precio':'Desde $1,899 USD + 799 IMP Por persona en habitación Doble',
     'incluye':'<strong>EL VIAJE INCLUYE : </strong><br>-Boleto de avión México – Londres / Madrid – México volando en clase turista con AEROMÉXICO, algunas salidas son con Iberia Vía Madrid.<br>- 17 Noches de alojamiento en categoría indicada .<br>- Desayunos de acuerdo con itinerario. <br>- Visitas según itinerario.<br>- Guía profesional de habla hispana. <br>- Translados los indicados.<br>- Transporte en autocar turístico. <br>- Documentos electrónicos código QR  (empresa socialmente responsable con el medio ambiente).<br>',
     'noincluye':'<strong>EL VIAJE NO INCLUYE :</strong><br>- Alimentos, gastos de indole personal. <br>- Ningún servicio no especificado. <br>- Todas las excursiones que se mencionan como opcionales. <br>- Impuestos aéreos por persona. <br>NOTA: 65 EUROS QUE CORRESPONDEN A PROPINAS PARA CHOFERES, TASAS HOTELES Y MUNICIPALES. SE PAGA EN DESTINO<br>',
->>>>>>> productosjlp
     'duracion':'Duración 19 días | 17 noches',
     });
 
 addItem({'id':2,
-<<<<<<< HEAD
-    'titlo':'Especial Egipto y Dubái',
-    'img': '',
-    'lugares':'El Cairo, Aswan, Kom Ombo, Edfu, Esna, Luxor, Dubái',
-    'precio':'Desde $1,299 USD + 999 IMP Por persona en habitación Doble',
-    'incluye':'Incluye : Vuelos, Hotel, Tours, Translados',
-    'noincluye':'El viaje no incluye<br>Gastos personales y extras en los hoteles.<br>Propinas en Egipto: 60 USD por persona. (Se paga directo en destino)<br>Propinas en Dubái: 35 USD por persona. (Se paga directo en destino)<br>Impuesto Turismo en Dubái: 5 USD por habitación por noche. (Se paga directo en destino)BookingConclusion<br>Impuestos aéreos<br>Visa de Egipto: 25 USD aproximadamente (se paga en destino)<br>Ningún servicio no especificado como incluido o como opcional.<br>Seguro de viaje (Es obligatorio para entrar a los Emiratos árabes Unidos).',
-=======
     'titulo':'Especial Egipto y Dubái',
     'img': './assets/egiptoydubai.jpeg',
     'lugares':'El Cairo, Aswan, Kom Ombo, Edfu, Esna, Luxor, Dubái',
     'precio':'Desde $1,299 USD + 999 IMP Por persona en habitación Doble',
     'incluye':'<strong>EL VIAJE INCLUYE : </strong><br> Boleto de avión en viaje redondo México – Dubái – México, en clase turista.<br>-Vuelos Dubái – El Cairo - Dubái / El Cairo – Aswan / Luxor – El Cairo en clase turista.<br>- 3 noches de alojamiento en el Cairo<br>-3 noches de crucero por el Nilo<br>-1 noche de alojamiento en Luxor<br>-5 noches de alojamiento en Dubái.<br>-Régimen alimenticio indicado en el itinerario.<br>-Traslados indicados.<br>-Visitas indicadas.<br>-Guías de habla hispana.<br>-Autocar con aire acondicionado.<br>',
     'noincluye':'<strong><br>EL VIAJE NO INCLUYE : </strong><br>Gastos personales y extras en los hoteles.<br>Propinas en Egipto: 60 USD por persona. (Se paga directo en destino)<br>Propinas en Dubái: 35 USD por persona. (Se paga directo en destino)<br>Impuesto Turismo en Dubái: 5 USD por habitación por noche. (Se paga directo en destino)BookingConclusion<br>Impuestos aéreos<br>Visa de Egipto: 25 USD aproximadamente (se paga en destino)<br>Ningún servicio no especificado como incluido o como opcional.<br>Seguro de viaje (Es obligatorio para entrar a los Emiratos árabes Unidos).',
->>>>>>> productosjlp
     'duracion':'Duración 15 días | 12 noches'
     });
 
 addItem({'id':3,
-<<<<<<< HEAD
-    'titlo':'Tailandia y Phuket',
-    'img': '',
-    'lugares':'Bangkok, Kanchanaburi, Chiang Rai, Chiang Mai, Phuket',
-    'precio':'Desde $1,599 USD + 999 IMP Por persona en habitación Doble',
-    'incluye':'Incluye : Vuelos, Hotel, Tours Guiados, Translados',
-    'noincluye':'El viaje no incluye<br>-Gastos personales y extras en los hoteles.<br>Propinas en Tailandia: 50 USD por persona (Se paga directo en destino)Ningún servicio no especificado como incluido o especificado como opcional.<br>Visa de Tailandia<br>Impuestos aéreos por persona',
-    'duracion':'Duración 13 días | 9 noches',
-    });
-
-=======
     'titulo':'Tailandia y Phuket',
     'img': './assets/tailandia-phukec.jpeg',
     'lugares':'Bangkok, Kanchanaburi, Chiang Rai, Chiang Mai, Phuket',
@@ -139,4 +93,3 @@ addItem({'id':3,
     'noincluye':'<strong><br>EL VIAJE NO INCLUYE : </strong><br>-Gastos personales y extras en los hoteles.<br>Propinas en Tailandia: 50 USD por persona (Se paga directo en destino)Ningún servicio no especificado como incluido o especificado como opcional.<br>Visa de Tailandia<br>Impuestos aéreos por persona',
     'duracion':'Duración 13 días | 9 noches',
     });
->>>>>>> productosjlp
