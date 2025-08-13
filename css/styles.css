@@ -167,11 +167,13 @@ h1 {
 }
 /*Forma Responsiva*/
 @media (max-width: 768px) {
-  .footer-container {
+  .footer-container,
+  .footer-card {
     flex-direction: column;
     text-align: center;
   }
 
+  
   .footer-logo,
   .footer-social,
   .footer-contact,
