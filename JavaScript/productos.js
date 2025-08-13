@@ -93,3 +93,21 @@ addItem({'id':3,
     'noincluye':'<strong><br>EL VIAJE NO INCLUYE : </strong><br>-Gastos personales y extras en los hoteles.<br>Propinas en Tailandia: 50 USD por persona (Se paga directo en destino)Ningún servicio no especificado como incluido o especificado como opcional.<br>Visa de Tailandia<br>Impuestos aéreos por persona',
     'duracion':'Duración 13 días | 9 noches',
     });
+
+    addItem({'id' : '4', 
+    'titulo': 'Japón, El Camino del Samurái' ,
+    'img' :  './assets/japon.jpeg', 
+    'lugares' : 'Hiroshima, Osaka, Kioto.',
+    'precio' : '$1,999 USD + 999IMP Por persona en habitación Doble.',  
+    'incluye':  '<strong>EL VIAJE INCLUYE: </strong>, <br>- Boleto de avión. <br>- Boleto tren bala Tokyo - Hiroshima.  <br>- 2 noches de alojamiento en Hiroshima. <br>- 3 noches de alojamiento en Osaka. <br>- 1 noche de alojamiento en Nagoya. <br>- 03 noches de alojamiento en Tokio. <br>- Visitas indicadas. <br>- Autocar con aire acondicionado.',
+    'noincluye' :'<strong>El VIAJE NO INCLUYE</strong>, <br>- Gastos personales y extras.  <br>- Bebidas. <br>- Propinas Japón: 50 USD por persona (se pagan directamente en destino). <br>- Ningún servicio no especificado como incluido o especificado como opcional).', 
+    'duracion' : '11 días | 9 noches'})
+
+ addItem({'id' : '5',
+    'titulo': 'Tailandia y Phunket EXPRESS' ,
+    'img' :  './assets/tailandiaExpress.jpeg',
+    'lugares' : 'Bangkok, Ayutthaya, Lopburi, Phitsanuloke, Sukhothai, Chiang Rai, Chiang Mai, Phuket.',
+    'precio' : '$999 USD + 999IMP Por persona en habitación Doble.', 
+    'incluye':  '<strong>EL VIAJE INCLUYE: </strong>, <br>- Boleto de avión en viaje redondo México -Bangkok - México, en clase tusrita. <br>- Boleto de avión Chiang Mai - Phuket en clase turista. <br>- Boleto de avión Phuket - Bangkok en clase turista. <br>- 2 noches de alojamiento en Bangkpk. <br>- 1 noche de alojamiento en Phitsanuloke. <br>- 1 noche de alojamiento en Chiang Rai. <br>- 1 noche de alojamiento en Chiang Mai. <br>- 2 noches de alojamiento en Phuket. <br>- Régimen alimenticio indicado en itinerario.  <br>- Autocar con aire acondicionado.',
+    'noincluye' : '<strong>El VIAJE NO INCLUYE</strong>, Gastos personales y extras en hoteles, Bebidas, Propinas para maleteros, camaristas, meseros, etc, Propinas en Tailandia: 50 USD por persona (Se paga directo en destino), Gastos estras en los hoteles como llamadas telefónicas, lavandería, etc, Visa de Tailanda, Fee de cámaras en los monumentos Ningún servicio no específicado como incluido o especificado como opcional, Impuestos aéreos',
+    'duracion' : '11 días | 7 noches'})
