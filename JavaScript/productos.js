@@ -24,7 +24,7 @@ function addItem(item){
 
               '<!-- boton -->\n' +
               '<div class="card-body" style="display: flex; justify-content: end;">\n' +
-                `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
+                `<button  style="border-radius: 31px; padding: .8rem 3.5rem; filter: drop-shadow(0 0 0.3rem #12313299);" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
                   'Reservar\n' +
                 '</button>\n' +
               '</div>\n' +
