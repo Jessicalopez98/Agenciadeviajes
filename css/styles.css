@@ -293,6 +293,16 @@ i {
 }
 
 .card-img-top {
-  border-radius: 15px;
-  padding: 0 1.5rem;
+  border-radius: 25px;
+  width: 340px !important;
+  height: 280px;
+  border-top-left-radius: 25px !important;
+  border-top-right-radius: 25px !important;
+}
+
+article > header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
