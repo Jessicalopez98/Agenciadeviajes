@@ -105,14 +105,39 @@ addItem({'id':3,
 
  addItem({'id' : '5',
     'titulo': 'Tailandia y Phunket EXPRESS' ,
-    'img' :  './assets/tailandiaExpress.jpeg',
+    'img' :  './assets/tailandiaExpress.jpg',
     'lugares' : 'Bangkok, Ayutthaya, Lopburi, Phitsanuloke, Sukhothai, Chiang Rai, Chiang Mai, Phuket.',
     'precio' : '$999 USD + 999IMP Por persona en habitación Doble.', 
     'incluye':  '<strong>EL VIAJE INCLUYE: </strong>, <br>- Boleto de avión en viaje redondo México -Bangkok - México, en clase tusrita. <br>- Boleto de avión Chiang Mai - Phuket en clase turista. <br>- Boleto de avión Phuket - Bangkok en clase turista. <br>- 2 noches de alojamiento en Bangkpk. <br>- 1 noche de alojamiento en Phitsanuloke. <br>- 1 noche de alojamiento en Chiang Rai. <br>- 1 noche de alojamiento en Chiang Mai. <br>- 2 noches de alojamiento en Phuket. <br>- Régimen alimenticio indicado en itinerario.  <br>- Autocar con aire acondicionado.',
     'noincluye' : '<strong>El VIAJE NO INCLUYE</strong>, Gastos personales y extras en hoteles, Bebidas, Propinas para maleteros, camaristas, meseros, etc, Propinas en Tailandia: 50 USD por persona (Se paga directo en destino), Gastos estras en los hoteles como llamadas telefónicas, lavandería, etc, Visa de Tailanda, Fee de cámaras en los monumentos Ningún servicio no específicado como incluido o especificado como opcional, Impuestos aéreos',
     'duracion' : '11 días | 7 noches'})
 
-    //item 6,7 y 8
+  addItem({'id':'6',
+    'titulo':'Turquía con Islas Griegas en Cruero de 4 noches',
+    'img': './assets/turquiaislasgriegas.jpeg',
+    'lugares':'Turquía, Grecia',
+    'precio': 'Desde $1,399 USD + 999 IMP',
+    'incluye': '<strong> EL VIAJE INCLUYE: </strong><br> -Vuelos. <br> -Hospedaje. <br>-Desayuno. <br> -Guía habla hispana. <br> -Traslados. <br>-Visitas.',
+    'noincluye': '<strong> EL VIAJE NO INCLUYE: </strong> <br> -Gastos personales y extras en los hoteles. <br> -Bebidas. <br> -Propinas en Turquía: 45 USD por persona. <br> -Impuestos. <br> -Tasa de servicio a bordo del crucero. <br> -Visa de Turquía.',
+    'duracion': '15 días | 13 noches'})
+
+  addItem({'id':'7',
+    'titulo':'Con sabor a Colombia',
+    'img': './assets/consaboracolombia.jpeg',
+    'lugares':'Bogotá, Medellín, Cartagena',
+    'precio': '$899 USD + 399 IMP',
+    'incluye': '<strong> EL VIAJE INCLUYE: </strong><br> -Vuelos. <br> -Hospedaje. <br>-Desayuno. <br> -Guía habla hispana. <br> -Traslados. <br>-Visitas.',
+    'noincluye': '<strong> EL VIAJE NO INCLUYE: </strong><br> -Seguro de viajero. <br> -Gastos personales y propinas a maleteros, trasladistas y meseros. <br> -Actividades acuáticas, snorkel, buceo con tanque, etc. <br> -Exceso de equipaje. <br> -Propinas.',
+    'duracion': '8 días | 7 noches'})
+
+  addItem({'id':'8',
+'titulo':'Orlando, Navidad y Año Nuevo',
+'img': './assets/orlandonavidad.jpeg',
+'lugares':'Orlando',
+'precio': '$999 USD + 399 IMP',
+'incluye': '<strong> EL VIAJE INCLUYE: </strong><br> -Vuelos. <br> -Hospedaje. <br>-Desayuno. <br> -Guía habla hispana. <br> -Traslados. <br>-Visitas.',
+'noincluye': '<strong> EL VIAJE NO INCLUYE: </strong><br> -IMPUESTOS $399 USD POR PERSONA. <br> -Traslados en los parques Disney. <br> -Tickets Universal. <br> -Alimentos, seguro de asistencia médica, propinas. <br> -Equipaje documentado y asiento asignado. ',
+'duracion': '8 días | 7 noches'})
 
 
   addItem({'id': 9,
