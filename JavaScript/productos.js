@@ -58,8 +58,8 @@ function addItem(item){
 
 const itemsContainer = document.getElementById("list-items");
 itemsContainer.innerHTML += itemHTML;
-const itemsModal = document.getElementById("modal");
-itemsModal.innerHTML += itemHTML;
+//const itemsModal = document.getElementById("modal");
+//itemsModal.innerHTML += itemHTML;
 
 }   
 
