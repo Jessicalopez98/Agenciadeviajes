@@ -23,16 +23,10 @@ function addItem(item) {
                 '<li class="list-group-item"><i class="bi bi-car-front"></i> Traslado</li>\n' +
                 '<li class="list-group-item"><i class="bi bi-geo-alt"></i> Visitas Guiadas</li>\n' +
               '</ul>\n' +
-
-              '<!-- boton -->\n' +
-              '<div class="card-body" style="display: flex; justify-content: flex-start; align-items: end;">\n' +
-                `<button  style="border-radius: 31px; padding: .8rem 3.5rem; filter: drop-shadow(0 0 0.3rem #12313299);" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
-                'Reservar\n' +
-                '</button>\n' +
-              '</div>\n' +
             '</div>\n' +
+              
             
-            '<div class="col-lg-6 col-md-6">\n' +
+            '<div class="col-lg-6 col-sm">\n' +
               '<ul class="list-unstyled mb-2 mb-md-0">\n' +
                 '<i class="bi bi-sun-fill" id="dia"></i>'+ item.dias +' Días\n' +
                 '<i class="bi bi-moon" id="noches"></i>'+ item.noches +' Noches\n' +
@@ -40,6 +34,19 @@ function addItem(item) {
             '</div>\n' +
             
       '</div>\n' +
+      
+      '<div class="row">\n' +
+        '<div class="col-lg-6 col-sm">\n' +
+            '<!-- boton -->\n' +
+              '<div class="card-body" style="display: flex; justify-content: flex-start; align-items: end;">\n' +
+                `<button  style="border-radius: 31px; padding: .8rem 3.5rem; filter: drop-shadow(0 0 0.3rem #12313299);" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
+                'Reservar\n' +
+                '</button>\n' +
+              '</div>\n' +
+            
+        '</div>\n' +
+      '</div>\n' +
+
     '</footer-card>\n' +
     '</article>\n' +
     '</div>\n' +

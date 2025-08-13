@@ -168,7 +168,9 @@ h1 {
 /*Forma Responsiva*/
 @media (max-width: 768px) {
   .footer-container,
-  .footer-card {
+  .card-footer,
+  .list-group-item,
+  .list-unstyled{
     flex-direction: column;
     text-align: center;
   }
