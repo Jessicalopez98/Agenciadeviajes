@@ -24,7 +24,7 @@ function addItem(item){
 
               '<!-- boton -->\n' +
               '<div class="card-body" style="display: flex; justify-content: end;">\n' +
-                '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">\n' +
+                `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
                   'Reservar\n' +
                 '</button>\n' +
               '</div>\n' +
@@ -35,7 +35,7 @@ function addItem(item){
       '</div>\n' +
 
       '<!-- modal -->\n' +
-      '<div class="modal" id="modal" tabindex="-1">\n' +
+      `<div class="modal" id="modal${item.id}" tabindex="-1">\n` +
         '<div class="modal-dialog">\n' +
           '<div class="modal-content">\n' +
             '<div class="modal-header">\n' +
