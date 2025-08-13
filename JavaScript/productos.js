@@ -111,3 +111,25 @@ addItem({'id':3,
     'incluye':  '<strong>EL VIAJE INCLUYE: </strong>, <br>- Boleto de avión en viaje redondo México -Bangkok - México, en clase tusrita. <br>- Boleto de avión Chiang Mai - Phuket en clase turista. <br>- Boleto de avión Phuket - Bangkok en clase turista. <br>- 2 noches de alojamiento en Bangkpk. <br>- 1 noche de alojamiento en Phitsanuloke. <br>- 1 noche de alojamiento en Chiang Rai. <br>- 1 noche de alojamiento en Chiang Mai. <br>- 2 noches de alojamiento en Phuket. <br>- Régimen alimenticio indicado en itinerario.  <br>- Autocar con aire acondicionado.',
     'noincluye' : '<strong>El VIAJE NO INCLUYE</strong>, Gastos personales y extras en hoteles, Bebidas, Propinas para maleteros, camaristas, meseros, etc, Propinas en Tailandia: 50 USD por persona (Se paga directo en destino), Gastos estras en los hoteles como llamadas telefónicas, lavandería, etc, Visa de Tailanda, Fee de cámaras en los monumentos Ningún servicio no específicado como incluido o especificado como opcional, Impuestos aéreos',
     'duracion' : '11 días | 7 noches'})
+
+    //item 6,7 y 8
+
+
+  addItem({'id': 9,
+  'titulo':'Escapada a Costa Rica',
+  'img': './assets/escapadacostarica.jpeg',
+  'lugares':'San José',
+  'precio': 'Desde $499 USD + 299 IMP ',
+  'incluye': '<strong>EL VIAJE INCLUYE : </strong><br>-Boleto de avión México – San José – México. <br> - 04 noches de alojamiento en San José con desayunos diarios incluidos. <br> - Traslados de llegada y salida. <br> - Visita de Ciudad. <br> - Guía de habla hispana. <br> - Documentos de viaje se entregarán en formato digital para descargar en su dispositivo móvil. <br>',
+  'noincluye': '<strong>EL VIAJE NO INCLUYE : </strong><br>- Tarjeta de Asistencia Turística (seguro de viajero). Consultar opciones.<br> - Ningún servicio no especificado.<br> - Excursiones opcionales.<br> - Gastos personales y propinas a maleteros, trasladistas y meseros.',
+  'duracion': 'Duración 5 días | 4 noches',})
+
+addItem({'id': 10,
+  'titulo':'Gran Triángulo del Este',
+  'img': './assets/grantriangulodeleste.jpg',
+  'lugares':'Nueva Jersey, Boston, Niagara Falls, Washington, Philadelphia, New York',
+  'precio': 'Desde $999 USD + 499 IMP',
+  'incluye': '<strong>EL VIAJE INCLUYE : </strong><br>-Vuelo redondo México- New York- México<br> - 03 noches de Alojamiento en New Jersey<br> - 01 noche de Alojamiento en Boston<br> - 01 noche de Alojamiento en Niagara Falls (lado americano)<br> - 02 noches de Alojamiento en Washington<br> - Visitas panorámicas de ciudad: Niagara Falls - Boston- Washington - Philadelphia - New York<br> - Desayunos Americanos (Excepto Boston y Niagara Falls)<br> - Traslados Hotel- Apto- Hotel<br> - Vehículo con Aire Acondicionado<br> - Guía de habla hispana',
+  'no incluye':'<strong>EL VIAJE NO INCLUYE : </strong> <br> - IMPUESTOS DE $499 USD POR PERSONA<br> - Gastos personales, alimentos, seguros de asistencia.<br> - Desayunos en Boston y Niagara<br> - Excursiones opcionales (pagaderos en destino) consulte opcionales.<br> - Propinas pagaderas en destino ($4 a $5 por día y por persona para cada uno de ellos, cantidad estándar en los EE.UU.).<br> - El hotel en Manhattan cobrará directamente al pasajero un resort fee por habitación por noche pagaderos en destino (la tarifa dependerá sobre la categoría de hotel reservada).<br> - Equipaje documentado consulte condiciones.',
+  'duracion': 'Duración 8 días | 7 noches'});
+
