@@ -41,14 +41,14 @@
         elimina y crea.</p>
     </section>
     <section style="display: flex; gap: 1rem;justify-content: space-between;">
-      <article style="border: 1px solid #0000002e; border-radius: 13px;padding: 1rem;">
-        <h3>Paquetes activos</h3>
-        <p id="paquete-activos" style="font-size: 2.5rem; font-weight: 800;">2</p>
+      <article style="width: 100%;border: 1px solid #0000002e; border-radius: 13px;padding: 1rem;">
+        <h3 style="color:#00000088;">Paquetes activos</h3>
+        <p id="paquete-activos" style="font-size: 2.5rem; font-weight: 800; text-align: center; color: #A9D943;">2</p>
       </article>
 
-      <article style="border: 1px solid #0000002e; border-radius: 13px; padding: 1rem;">
-        <h3>Total de paquetes</h3>
-        <p id="total-paquetes" style="font-size: 2.5rem; font-weight: 800;">10</p>
+      <article style="width: 100%;border: 1px solid #0000002e; border-radius: 13px; padding: 1rem; ">
+        <h3 style="color:#00000088;">Total de paquetes</h3>
+        <p id="total-paquetes" style="text-align: center;font-size: 2.5rem; font-weight: 800; color: #A9D943;">10</p>
       </article>
     </section>
     <section class="mt-4" style="display: flex; justify-content: end ;">
@@ -67,12 +67,30 @@
   <div class="modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Crear paquetes</h5>
-          <p>Completa la información para crear nuevo paquete turístico</p>
+        <div class="modal-header" style="display: flex; flex-direction: column; align-items: start;">
+          <h5 class="modal-title" style="font-family: League Spartan; font-optical-sizing: auto; font-weight: 700; font-style: normal; color:
+      #27538c !important; text-align: center;">Crear paquetes</h5>
+          <p style="font-weight: 200; text-align: center;">Completa la información para crear nuevo paquete turístico
+          </p>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <label>Nombre del paquete<input type="text" class="input-group form-control"
+              placeholder="Viaje a Europa..."></label>
+          <label>Duración<input class="input-group form-control" type="text" placeholder="7 dias..."></label>
+          <label>Precio<input class="input-group form-control" type="text" placeholder="$123.45..."></label>
+          <label>Lugares<input class="input-group form-control" type="number" placeholder="$123.45..."></label>
+          <label>Dias<input class="input-group form-control" type="text" placeholder="3 dias..."></label>
+          <label>Noches<input class="input-group form-control" type="text" placeholder="6 Noches..."></label>
+          <!-- <label>Estado
+            <select class="input-group form-control" name="" id="select-estado-creacion">
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+          </label> -->
+          <label>Incluye<input class="input-group form-control" type="text" placeholder="Viaje a Europa..."></label>
+          <label>No Incluye<input class="input-group form-control" type="text" placeholder="Viaje a Europa..."></label>
+          <label>Cargar imagen<input class="input-group form-control" type="file"></label>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
