@@ -109,6 +109,7 @@ botonguardar.addEventListener("click", function (event) {
 function agregarPaqueteATabla(paquete) {
   const fila = document.createElement("tr");
   fila.innerHTML = `
+        <td>${paquete.id}</td>
           <td>${paquete.titulo}</td>
           <td>${paquete.precio}</td>
           <td>${paquete.lugar}</td>
