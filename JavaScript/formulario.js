@@ -14,11 +14,23 @@ const iptNoches=document.getElementById("iptNoches");
 const iptAlerta=document.getElementById("iptAlerta");
 
 //boton de crear
-const iptboton=document.getElementById("iptboton");
+const botonguardar=document.getElementById("btnGuardar");
+const tablaListaPaquetes = document.getElementById("tablaListaPaquetes");
+const modal = new bootstrap.Modal(document.getElementById('formModal'));
 
 // orejita de boton
-iptboton.addEventListener("click", function(event) {
+botonguardar.addEventListener("click", function(event) {
     event.preventDefault();
+        const name = iptName.value.trim();
+        const precio = iptPrecio.value.trim();
+        const lugar = iptLugar.value.trim();
+        const dias = iptDias.value.trim();
+        const noches = iptNoches.value.trim();
+
+        if (!name || !precio || !lugar || !dias || !noches) {
+          alert('Todos los campos son obligatorios.');
+          return;
+        }
   
 
 //Alertas de los mensajes 

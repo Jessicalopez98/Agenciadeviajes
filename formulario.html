@@ -58,13 +58,30 @@
     </section>
     <section class="mt-4" style="border: 1px solid #0000002e;">
       <table>
+          <!-- Insertar tabla aquí -->
+            <table class="table" id="tablaListaPaquetes">
+              <thead>
+                <tr>
+                 <!-- <th scope="col">#</th> -->
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Lugares</th>
+                  <th scope="col">Dias</th>
+                  <th scope="col">Noches</th>
+                  <!-- <th scope="col">Incluye</th> -->
+                  <!-- <th scope="col">No Incluye</th> -->
+                  <!-- <th scope="col">Estado</th> -->
+                </tr>
+              </thead>
+              <tbody>
 
+              </tbody>
       </table>
     </section>
 
   </main>
 
-  <div class="modal" tabindex="-1">
+  <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" style="display: flex; flex-direction: column; align-items: start;">
@@ -74,7 +91,7 @@
           </p>
         </div>
         <div class="modal-body">
-          <label >Nombre del paquete<input id="iptName" type="text" class="input-group form-control"
+          <label >Nombre<input id="iptName" type="text" class="input-group form-control"
               placeholder="Viaje a Europa..."></label>
           <label>Precio<input id="iptPrecio" class="input-group form-control" type="text" placeholder="$123.45..."></label>
           <label>Lugares<input id="iptLugar"class="input-group form-control" type="text" placeholder="Que lugares vas a visitar"></label>
@@ -86,14 +103,14 @@
               <option value="inactivo">Inactivo</option>
             </select>
           </label> -->
-          <label>Incluye<input class="input-group form-control" type="text" placeholder="Viaje a Europa..."></label>
-[O          <label>No Incluye<input class="input-group form-control" type="text" placeholder="Viaje a Europa..."></label>
+          <label>Incluye<input class="input-group form-control" type="text" placeholder="Incluye..."></label>
+          <label>No Incluye<input class="input-group form-control" type="text" placeholder="No Incluye"></label>
           <label>Cargar imagen<input class="input-group form-control" type="file"></label>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-          <button id="iptboton" type="button" class="btn btn-success">Crear paquete</button>
+          <button id="btnGuardar" type="button" class="btn btn-success">Guardar</button>
         </div>
       </div>
     </div>
