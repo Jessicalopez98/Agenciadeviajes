@@ -30,13 +30,14 @@ const tablaListaPaquetes = document.getElementById("tablaListaPaquetes");
 // orejita de boton
 botonguardar.addEventListener("click", function (event) {
   event.preventDefault();
-  const name = iptName.value.trim();
+  const titulo = iptName.value.trim();
   const precio = iptPrecio.value.trim();
   const lugar = iptLugar.value.trim();
   const dias = iptDias.value.trim();
   const noches = iptNoches.value.trim();
-  const noIncluye = iptNoIncluye.value.trim();
+  const noincluye = iptNoIncluye.value.trim();
   const incluye = iptIncluye.value.trim();
+  const img = "https://one.cdnmega.com/images/viajes/covers/16100-estrellas-de-europa-1024x575_67fff59a24661.webp";
 
   // Ocultar alerta al iniciar
   iptAlerta.style.display = "none";
@@ -45,10 +46,10 @@ botonguardar.addEventListener("click", function (event) {
 
   let mensajesError = [];
 
-  if (!name || !precio || !lugar || !dias || !noches || !noIncluye || !incluye) {
+  if (!titulo || !precio || !lugar || !dias || !noches || !noincluye || !incluye) {
     mensajesError.push("Todos los campos son obligatorios.");
   }
-  if (!validarNombre(name)) {
+  if (!validarNombre(titulo)) {
     mensajesError.push(
       "El nombre debe tener al menos 3 caracteres y ser texto."
     );
@@ -78,9 +79,10 @@ botonguardar.addEventListener("click", function (event) {
   iptAlerta.classList.add("alert-success");
   iptAlerta.innerHTML = "¡Formulario enviado correctamente!";
 
-  // Guardar paquete
-  const nuevoPaquete = { name, precio, lugar, dias, noches, noIncluye, incluye };
+  // Guardar paquete con id autoincremental
   const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+  let nuevoId = paquetes.length + 1;
+  const nuevoPaquete = { id: nuevoId, titulo, precio, lugar, dias, noches, noincluye, incluye,img };
   paquetes.push(nuevoPaquete);
   localStorage.setItem("paquetes", JSON.stringify(paquetes));
   agregarPaqueteATabla(nuevoPaquete);
@@ -107,7 +109,7 @@ botonguardar.addEventListener("click", function (event) {
 function agregarPaqueteATabla(paquete) {
   const fila = document.createElement("tr");
   fila.innerHTML = `
-          <td>${paquete.name}</td>
+          <td>${paquete.titulo}</td>
           <td>${paquete.precio}</td>
           <td>${paquete.lugar}</td>
           <td>${paquete.dias}</td>

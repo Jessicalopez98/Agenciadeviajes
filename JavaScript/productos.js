@@ -12,7 +12,7 @@ function addItem(item) {
     '</header>\n' +
     '<footer-card>\n' +
     '<h5 class="card-title" style="font-size:1.4rem">' + item.precio + '</h5> <!--aqui-->\n' +
-    
+
       '<div class="row">\n' +
             '<div class="col-lg-6 col-sm">\n' +
               '<ul>\n' +
@@ -24,17 +24,17 @@ function addItem(item) {
                 '<li class="list-group-item"><i class="bi bi-geo-alt"></i> Visitas Guiadas</li>\n' +
               '</ul>\n' +
             '</div>\n' +
-              
-            
+
+
             '<div class="col-lg-6 col-sm">\n' +
               '<ul class="list-unstyled mb-2 mb-md-0">\n' +
                 '<i class="bi bi-sun-fill" id="dia"></i>'+ item.dias +' Días\n' +
                 '<i class="bi bi-moon" id="noches"></i>'+ item.noches +' Noches\n' +
               '</ul>\n' +
             '</div>\n' +
-            
+
       '</div>\n' +
-      
+
       '<div class="row">\n' +
         '<div class="col-lg-6 col-sm">\n' +
             '<!-- boton -->\n' +
@@ -43,7 +43,7 @@ function addItem(item) {
                 'Reservar\n' +
                 '</button>\n' +
               '</div>\n' +
-            
+
         '</div>\n' +
       '</div>\n' +
 
@@ -81,7 +81,8 @@ function addItem(item) {
 
 }
 
-addItem({
+
+const arregloDePaquetes = [{
   'id': 1,
   'titulo': 'Gran Tour de Europa',
   'img': './assets/grantoureuropa.jpeg',
@@ -92,9 +93,8 @@ addItem({
   'duracion': 'Duración 19 días | 17 noches',
   'dias': 19,
   'noches': 17
-  });
-
-addItem({
+  },
+{
   'id': 2,
   'titulo': 'Especial Egipto y Dubái',
   'img': './assets/egiptoydubai.jpeg',
@@ -105,9 +105,8 @@ addItem({
   'duracion': 'Duración 15 días | 12 noches',
   'dias': 15,
   'noches': 12
-});
-
-addItem({
+},
+{
   'id': 3,
   'titulo': 'Tailandia y Phuket',
   'img': './assets/tailandia-phukec.jpeg',
@@ -118,9 +117,9 @@ addItem({
   'duracion': 'Duración 13 días | 9 noches',
   'dias': 13,
   'noches': 9
-});
+},
 
-addItem({
+{
   'id': '4',
   'titulo': 'Japón, El Camino del Samurái',
   'img': './assets/japon.jpeg',
@@ -131,9 +130,8 @@ addItem({
   'duracion': '11 días | 9 noches',
   'dias': 11,
   'noches': 9
-})
-
-addItem({
+},
+{
   'id': '5',
   'titulo': 'Tailandia y Phunket EXPRESS',
   'img': './assets/tailandiaExpress.jpg',
@@ -144,9 +142,9 @@ addItem({
   'duracion': '11 días | 7 noches',
   'dias': 13,
   'noches': 7
-})
+},
 
-addItem({
+{
   'id': '6',
   'titulo': 'Turquía con Islas Griegas en Cruero de 4 noches',
   'img': './assets/turquiaislasgriegas.jpeg',
@@ -157,9 +155,8 @@ addItem({
   'duracion': '15 días | 13 noches',
   'dias': 15,
   'noches': 13
-})
-
-addItem({
+},
+{
   'id': '7',
   'titulo': 'Con sabor a Colombia',
   'img': './assets/consaboracolombia.jpeg',
@@ -170,9 +167,8 @@ addItem({
   'duracion': '8 días | 7 noches',
   'dias': 8,
   'noches': 7
-})
-
-addItem({
+},
+{
   'id': '8',
   'titulo': 'Orlando, Navidad y Año Nuevo',
   'img': './assets/orlandonavidad.jpeg',
@@ -183,10 +179,8 @@ addItem({
   'duracion': '8 días | 7 noches',
   'dias': 8,
   'noches': 7
-})
-
-
-addItem({
+},
+{
   'id': 9,
   'titulo': 'Escapada a Costa Rica',
   'img': './assets/escapadacostarica.jpeg',
@@ -197,9 +191,8 @@ addItem({
   'duracion': 'Duración 5 días | 4 noches',
   'dias': 5,
   'noches': 4
-})
-
-addItem({
+},
+{
   'id': 10,
   'titulo': 'Gran Triángulo del Este',
   'img': './assets/grantriangulodeleste.jpg',
@@ -210,5 +203,14 @@ addItem({
   'duracion': 'Duración 8 días | 7 noches',
   'dias': 8,
   'noches': 7
-});
+}]
 
+arregloDePaquetes.forEach(addItem);
+
+function cargarPaquetesDeLocalStorage() {
+  const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+  console.log(paquetes);
+  paquetes.forEach(addItem);
+}
+
+cargarPaquetesDeLocalStorage();
