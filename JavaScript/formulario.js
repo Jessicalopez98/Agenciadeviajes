@@ -101,4 +101,26 @@ if(!validarNoches(iptNoches.value)){
 
         // Cerrar modal
         modal.hide();
+
+//Función para la tabla de los paquetes.
+
+        function agregarPaqueteATabla(paquete) {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${paquete.name}</td>
+          <td>${paquete.precio}</td>
+          <td>${paquete.lugar}</td>
+          <td>${paquete.dias}</td>
+          <td>${paquete.noches}</td>
+        `;
+        tablaListaPaquetes.appendChild(fila);
+      }
+
+      function cargarPaquetes() {
+        const paquetes = JSON.parse(localStorage.getItem('paquetes')) || [];
+        paquetes.forEach(agregarUsuarioATabla);
+      }
+      cargarPaquetes();
+
+
       //});
