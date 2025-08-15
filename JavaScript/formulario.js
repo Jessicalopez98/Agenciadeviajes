@@ -6,9 +6,9 @@ import {
   validarLugar,
 } from "./valform.js";
 
+
+const modal = new bootstrap.Modal(document.getElementById("formModal"));
 document.getElementById("botoncrear").addEventListener("click", () => {
-  // https://getbootstrap.com/docs/5.0/components/modal/
-  let modal = new bootstrap.Modal(document.querySelector(".modal"));
   modal.show();
 });
 
@@ -24,7 +24,7 @@ const iptIncluye = document.getElementById("iptIncluye")
 //boton de crear
 const botonguardar = document.getElementById("btnGuardar");
 const tablaListaPaquetes = document.getElementById("tablaListaPaquetes");
-const modal = new bootstrap.Modal(document.getElementById("formModal"));
+
 
 // orejita de boton
 botonguardar.addEventListener("click", function (event) {
