@@ -74,11 +74,31 @@ if(!validarNoches(iptNoches.value)){
         iptAlerta.innerHTML = "¡Formulario enviado correctamente!";
 
         // Limpiar campos
-        iptName.value = '';
-        iptPrecio.value = '';
-        iptDias.value = '';
-        iptNoches.value = '';
-        checkNewsletter.checked = false;
-       setTimeout(() => location.reload(), 3000);
+        //iptName.value = '';
+        //iptPrecio.value = '';
+        //iptDias.value = '';
+        //iptNoches.value = '';
+        //checkNewsletter.checked = false;
+       //setTimeout(() => location.reload(), 3000);
     }
 });
+
+	// JSON NUEVO PAQUETE
+        const nuevoPaquete = { name, proveedor, precio, inicio, fin, descuento };
+        const paquetes = JSON.parse(localStorage.getItem('paquetes')) || [];
+        paquetes.push(nuevoPaquete);
+        localStorage.setItem('paquetes', JSON.stringify(paquetes));
+
+        agregarPaqueteATabla(nuevoPaquete);
+
+        // Limpiar formulario
+        iptName.value = '';
+        iptProvedor.value = '';
+        iptPrecio.value = '';
+        iptInicio.value = '';  // Checar si los date se limpian
+        iptFin.value = '';    // Checar si los date se limpian
+        iptDescuento.value = '';
+
+        // Cerrar modal
+        modal.hide();
+      //});
