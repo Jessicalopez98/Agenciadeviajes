@@ -18,6 +18,8 @@ const iptLugar = document.getElementById("iptLugar");
 const iptDias = document.getElementById("iptDias");
 const iptNoches = document.getElementById("iptNoches");
 const iptAlerta = document.getElementById("iptAlerta");
+const iptNoIncluye = document.getElementById("iptNoIncluye")
+const iptIncluye = document.getElementById("iptIncluye")
 
 //boton de crear
 const botonguardar = document.getElementById("btnGuardar");
@@ -32,6 +34,8 @@ botonguardar.addEventListener("click", function (event) {
   const lugar = iptLugar.value.trim();
   const dias = iptDias.value.trim();
   const noches = iptNoches.value.trim();
+  const noIncluye = iptNoIncluye.value.trim();
+  const incluye = iptIncluye.value.trim();
 
   // Ocultar alerta al iniciar
   iptAlerta.style.display = "none";
@@ -40,7 +44,7 @@ botonguardar.addEventListener("click", function (event) {
 
   let mensajesError = [];
 
-  if (!name || !precio || !lugar || !dias || !noches) {
+  if (!name || !precio || !lugar || !dias || !noches || !noIncluye || !incluye) {
     mensajesError.push("Todos los campos son obligatorios.");
   }
   if (!validarNombre(name)) {
@@ -74,7 +78,7 @@ botonguardar.addEventListener("click", function (event) {
   iptAlerta.innerHTML = "¡Formulario enviado correctamente!";
 
   // Guardar paquete
-  const nuevoPaquete = { name, precio, lugar, dias, noches };
+  const nuevoPaquete = { name, precio, lugar, dias, noches, noIncluye, incluye };
   const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
   paquetes.push(nuevoPaquete);
   localStorage.setItem("paquetes", JSON.stringify(paquetes));
@@ -87,6 +91,8 @@ botonguardar.addEventListener("click", function (event) {
   iptLugar.value = "";
   iptDias.value = "";
   iptNoches.value = "";
+  iptNoIncluye.value = "";
+  iptIncluye.value = "";
 
   // Ocultar alerta y cerrar modal después de un breve tiempo
   setTimeout(() => {

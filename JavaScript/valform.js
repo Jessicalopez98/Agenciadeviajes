@@ -6,7 +6,7 @@ export function validarNombre(nombre) {
 
 export function validarPrecio(precio) {
     if (isNaN(precio) || precio === '') { // Changed 'input' to 'precio'
-        alert('Por favor ingrese sólo números.');
+        // alert('Por favor ingrese sólo números.');
         return false;
     }
     return true;
@@ -18,7 +18,7 @@ export function validarLugar(lugar) {
 
 export function validarDias(dias) {
     if (isNaN(dias) || dias.trim() === "") {
-        alert("Por favor ingrese sólo número.");
+        // alert("Por favor ingrese sólo número.");
         return false;
     }
     return true;
@@ -27,7 +27,7 @@ export function validarDias(dias) {
 
 export function validarNoches(noches) {
     if (isNaN(noches) || noches.trim() === "") {
-        alert("Por favor ingrese sólo número.");
+        // alert("Por favor ingrese sólo número.");
         return false;
     }
     return true;
