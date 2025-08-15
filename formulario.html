@@ -52,7 +52,7 @@
       </article>
     </section>
     <section class="mt-4" style="display: flex; justify-content: end ;">
-      <button id="boton-crear-paquete" class="rounded-pill btn btn-success" style="padding: .2rem 2rem;">
+      <button id="botoncrear" class="rounded-pill btn btn-success" style="padding: .2rem 2rem;">
         <span style="font-weight: 800;">+ </span> Crear nuevo paquete
       </button>
     </section>
@@ -74,13 +74,12 @@
           </p>
         </div>
         <div class="modal-body">
-          <label>Nombre del paquete<input type="text" class="input-group form-control"
+          <label >Nombre del paquete<input id="iptName" type="text" class="input-group form-control"
               placeholder="Viaje a Europa..."></label>
-          <label>Duración<input class="input-group form-control" type="text" placeholder="7 dias..."></label>
-          <label>Precio<input class="input-group form-control" type="text" placeholder="$123.45..."></label>
-          <label>Lugares<input class="input-group form-control" type="number" placeholder="$123.45..."></label>
-          <label>Dias<input class="input-group form-control" type="text" placeholder="3 dias..."></label>
-          <label>Noches<input class="input-group form-control" type="text" placeholder="6 Noches..."></label>
+          <label>Precio<input id="iptPrecio" class="input-group form-control" type="text" placeholder="$123.45..."></label>
+          <label>Lugares<input id="iptLugar"class="input-group form-control" type="number" placeholder="$123.45..."></label>
+          <label>Días<input id="iptDias" class="input-group form-control" type="text" placeholder="3 dias..."></label>
+          <label>Noches<input id="iptNoches" class="input-group form-control" type="text" placeholder="6 Noches..."></label>
           <!-- <label>Estado
             <select class="input-group form-control" name="" id="select-estado-creacion">
               <option value="activo">Activo</option>
@@ -94,11 +93,13 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Crear paquete</button>
+          <button id="iptboton" type="button" class="btn btn-success">Crear paquete</button>
         </div>
       </div>
     </div>
   </div>
+  <div id="iptAlerta" class="alert alert-danger" role="alert">
+</div>
 
   <!-- Link Bootstrap -->
   <!-- <footer></footer> -->
