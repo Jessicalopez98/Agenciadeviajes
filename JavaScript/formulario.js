@@ -20,6 +20,8 @@ const iptNoches = document.getElementById("iptNoches");
 const iptAlerta = document.getElementById("iptAlerta");
 const iptNoIncluye = document.getElementById("iptNoIncluye")
 const iptIncluye = document.getElementById("iptIncluye")
+const cardTotalPaquetes = document.getElementById("total-paquetes");
+const cardPaquetesActivos = document.getElementById("paquetes-activos");
 
 //boton de crear
 const botonguardar = document.getElementById("btnGuardar");
