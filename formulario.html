@@ -58,25 +58,25 @@
     </section>
     <section class="mt-4" style="border: 1px solid #0000002e;">
       <table>
-          <!-- Insertar tabla aquí -->
-            <table class="table" id="tablaListaPaquetes">
-              <thead>
-                <tr>
-                 <!-- <th scope="col">#</th> -->
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Lugares</th>
-                  <th scope="col">Dias</th>
-                  <th scope="col">Noches</th>
-                  <!-- <th scope="col">Incluye</th> -->
-                  <!-- <th scope="col">No Incluye</th> -->
-                  <!-- <th scope="col">Estado</th> -->
-                </tr>
-              </thead>
-              <tbody>
+        <!-- Insertar tabla aquí -->
+        <table class="table" id="tablaListaPaquetes">
+          <thead>
+            <tr>
+              <!-- <th scope="col">#</th> -->
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Lugares</th>
+              <th scope="col">Dias</th>
+              <th scope="col">Noches</th>
+              <!-- <th scope="col">Incluye</th> -->
+              <!-- <th scope="col">No Incluye</th> -->
+              <!-- <th scope="col">Estado</th> -->
+            </tr>
+          </thead>
+          <tbody>
 
-              </tbody>
-      </table>
+          </tbody>
+        </table>
     </section>
 
   </main>
@@ -91,12 +91,15 @@
           </p>
         </div>
         <div class="modal-body">
-          <label >Nombre<input id="iptName" type="text" class="input-group form-control"
+          <label>Nombre<input id="iptName" type="text" class="input-group form-control"
               placeholder="Viaje a Europa..."></label>
-          <label>Precio<input id="iptPrecio" class="input-group form-control" type="text" placeholder="$123.45..."></label>
-          <label>Lugares<input id="iptLugar"class="input-group form-control" type="text" placeholder="Que lugares vas a visitar"></label>
+          <label>Precio<input id="iptPrecio" class="input-group form-control" type="text"
+              placeholder="$123.45..."></label>
+          <label>Lugares<input id="iptLugar" class="input-group form-control" type="text"
+              placeholder="Que lugares vas a visitar"></label>
           <label>Días<input id="iptDias" class="input-group form-control" type="text" placeholder="3 días..."></label>
-          <label>Noches<input id="iptNoches" class="input-group form-control" type="text" placeholder="6 Noches..."></label>
+          <label>Noches<input id="iptNoches" class="input-group form-control" type="text"
+              placeholder="6 Noches..."></label>
           <!-- <label>Estado
             <select class="input-group form-control" name="" id="select-estado-creacion">
               <option value="activo">Activo</option>
@@ -106,6 +109,7 @@
           <label>Incluye<input class="input-group form-control" type="text" placeholder="Incluye..."></label>
           <label>No Incluye<input class="input-group form-control" type="text" placeholder="No Incluye"></label>
           <label>Cargar imagen<input class="input-group form-control" type="file"></label>
+          <div id="iptAlerta" class="alert alert-danger" role="alert" style="display:none;"></div>
 
         </div>
         <div class="modal-footer">
@@ -115,9 +119,6 @@
       </div>
     </div>
   </div>
-  <div id="iptAlerta" class="alert alert-danger" role="alert">
-</div>
-
   <!-- Link Bootstrap -->
   <!-- <footer></footer> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
