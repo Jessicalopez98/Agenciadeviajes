@@ -50,7 +50,7 @@ if(!validarPrecio(iptPrecio.value)){
         mensajesError.push("El precio debe de ser un dato numérico");
 }
 
-if(!validaLugar(iptLugar.value)){
+if(!validarLugar(iptLugar.value)){
         mensajesError.push("El lugar debe tener al menos 3 caracteres y ser texto");
 }
 
