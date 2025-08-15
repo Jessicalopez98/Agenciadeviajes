@@ -1,4 +1,4 @@
-import { validarNombre,validarPrecio,validaLugar,validarDias,validarNoches } from "./valform";
+import { validarNombre, validarPrecio, validarDias, validarNoches, validarLugar } from "./valform.js";
 
 document.getElementById("botoncrear").addEventListener("click", () => {
   // https://getbootstrap.com/docs/5.0/components/modal/
@@ -14,11 +14,11 @@ const iptNoches=document.getElementById("iptNoches");
 const iptAlerta=document.getElementById("iptAlerta");
 
 //boton de crear
-const botoncrear=document.getElementById("botoncrear");
+const iptboton=document.getElementById("iptboton");
 
-//orejita de boton
-//botoncrear.addEventListener("click", function(event) {
-    //event.preventDefault();
+// orejita de boton
+iptboton.addEventListener("click", function(event) {
+    event.preventDefault();
   
 
 //Alertas de los mensajes 
