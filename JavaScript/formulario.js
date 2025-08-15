@@ -84,7 +84,7 @@ if(!validarNoches(iptNoches.value)){
 });
 
 	// JSON NUEVO PAQUETE
-        const nuevoPaquete = { name, proveedor, precio, inicio, fin, descuento };
+        const nuevoPaquete = { name, precio, lugar, dias, noches };
         const paquetes = JSON.parse(localStorage.getItem('paquetes')) || [];
         paquetes.push(nuevoPaquete);
         localStorage.setItem('paquetes', JSON.stringify(paquetes));
@@ -93,11 +93,10 @@ if(!validarNoches(iptNoches.value)){
 
         // Limpiar formulario
         iptName.value = '';
-        iptProvedor.value = '';
         iptPrecio.value = '';
-        iptInicio.value = '';  // Checar si los date se limpian
-        iptFin.value = '';    // Checar si los date se limpian
-        iptDescuento.value = '';
+        iptDias.value = '';  
+        iptNoches.value = '';   
+        checkNewsletter.checked = false;
 
         // Cerrar modal
         modal.hide();
