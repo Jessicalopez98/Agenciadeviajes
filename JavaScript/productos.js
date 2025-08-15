@@ -62,6 +62,10 @@ function addItem(item) {
         '</div>\n' +
         '<div class="modal-body">\n' +
           '<p>' + item.incluye + item.noincluye + '</p>\n' +
+          '<p><strong>Duración:</strong> ' + item.duracion + '</p>\n' +
+          '<p><strong>Lugares:</strong> ' + item.lugares + '</p>\n' +
+          '<p>Para más información, por favor contactanos.</p>\n' +
+          '<p>¡Gracias por tu interés en nuestros paquetes turísticos!</p>\n' +
         '</div>\n' +
         '<div class="modal-footer">\n' +
           '<a href="./contactanos.html">\n' +
@@ -209,7 +213,6 @@ arregloDePaquetes.forEach(addItem);
 
 function cargarPaquetesDeLocalStorage() {
   const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-  console.log(paquetes);
   paquetes.forEach(addItem);
 }
 
