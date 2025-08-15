@@ -81,7 +81,7 @@ if(!validarNoches(iptNoches.value)){
         //checkNewsletter.checked = false;
        //setTimeout(() => location.reload(), 3000);
     }
-});
+
 
 	// JSON NUEVO PAQUETE
         const nuevoPaquete = { name, precio, lugar, dias, noches };
@@ -120,6 +120,5 @@ if(!validarNoches(iptNoches.value)){
         paquetes.forEach(agregarUsuarioATabla);
       }
       cargarPaquetes();
-
-
-      //});
+      modal.close();
+});
