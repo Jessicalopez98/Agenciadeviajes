@@ -1,3 +1,4 @@
+
 import {
   validarNombre,
   validarPrecio,
@@ -5,7 +6,6 @@ import {
   validarNoches,
   validarLugar,
 } from "./valform.js";
-
 
 const modal = new bootstrap.Modal(document.getElementById("formModal"));
 document.getElementById("botoncrear").addEventListener("click", () => {
@@ -26,7 +26,6 @@ const cardPaquetesActivos = document.getElementById("paquetes-activos");
 //boton de crear
 const botonguardar = document.getElementById("btnGuardar");
 const tablaListaPaquetes = document.getElementById("tablaListaPaquetes");
-
 
 // orejita de boton
 botonguardar.addEventListener("click", function (event) {
@@ -85,6 +84,8 @@ botonguardar.addEventListener("click", function (event) {
   paquetes.push(nuevoPaquete);
   localStorage.setItem("paquetes", JSON.stringify(paquetes));
   agregarPaqueteATabla(nuevoPaquete);
+  actualizarContadoresPaquetes();
+  cargarPaquetesEnTabla();
 
   // Limpiar campos
 
@@ -114,3 +115,24 @@ function agregarPaqueteATabla(paquete) {
         `;
   tablaListaPaquetes.appendChild(fila);
 }
+
+function actualizarContadoresPaquetes() {
+  const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+  const total = paquetes.length;
+  cardTotalPaquetes.textContent = total;
+  cardPaquetesActivos.textContent = total;
+}
+
+actualizarContadoresPaquetes();
+
+// Cargar paquetes en la tabla al iniciar
+function cargarPaquetesEnTabla() {
+  const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+  // Limpiar la tabla antes de agregar
+  tablaListaPaquetes.innerHTML = "";
+  paquetes.forEach(paquete => {
+    agregarPaqueteATabla(paquete);
+  });
+}
+
+cargarPaquetesEnTabla();
