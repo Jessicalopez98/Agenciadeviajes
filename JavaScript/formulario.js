@@ -23,8 +23,8 @@ iptboton.addEventListener("click", function(event) {
 
 //Alertas de los mensajes 
 iptAlerta.classList.remove("alert-danger");
- iptAlerta.classList.add("alert-danger");
- iptAlerta.style.display = "none"; // Oculto inicialmente
+iptAlerta.classList.add("alert-danger");
+iptAlerta.style.display = "none"; // Oculto inicialmente
 
   let mensajesError = [];
 
@@ -52,14 +52,14 @@ if(!validarNoches(iptNoches.value)){
 
  if (mensajesError.length > 0) {
         // Mostrando errores concatenados en el div
-        alertResultado.style.display = "block"; // Mostrar el div
-        alertResultado.innerHTML = mensajesError.join("<br>");
+        iptAlerta.style.display = "block"; // Mostrar el div
+        iptAlerta.innerHTML = mensajesError.join("<br>");
     } else {
         //Mostrar mensaje éxito
-        alertResultado.style.display = "block";
-        alertResultado.classList.remove("alert-danger");
-        alertResultado.classList.add("alert-success");
-        alertResultado.innerHTML = "¡Formulario enviado correctamente!";
+        iptAlerta.style.display = "block";
+        iptAlerta.classList.remove("alert-danger");
+        iptAlerta.classList.add("alert-success");
+        iptAlerta.innerHTML = "¡Formulario enviado correctamente!";
 
         // Limpiar campos
         iptName.value = '';
@@ -69,4 +69,4 @@ if(!validarNoches(iptNoches.value)){
         checkNewsletter.checked = false;
        setTimeout(() => location.reload(), 3000);
     }
-//});
+});
