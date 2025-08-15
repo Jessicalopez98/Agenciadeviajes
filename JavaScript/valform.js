@@ -1,46 +1,34 @@
-export function validarNombre(nombre){
-if (typeof nombre !== 'string') return false;
+export function validarNombre(nombre) {
+    if (typeof nombre !== 'string') return false;
     if (nombre.trim().length < 3) return false;
     return true;
-};
-
-export function validarPrecio(precio){
-    const regex = /^\d{5}$/;
-    if (!regex.test(precio)) return false;
-
-    // Validar que no sean 10 dígitos iguales en el teléfono
-    const primerDigito = precio[0];
-    const todosIguales = precio.split('').every(d => d === primerDigito);
-    if (todosIguales) return false;
-
-    return true;
-};
-
-export function validaLugar(lugar){
-     return typeof lugar === 'string' && nombre.trim().length > 0 && lugar.trim().length <= 150;
 }
 
-export function validarDias(dias){
-    const regex = /^\d{2}$/;
-    if (!regex.test(dias)) return false;
+export function validarPrecio(precio) {
+    if (isNaN(precio) || precio === '') { // Changed 'input' to 'precio'
+        alert('Por favor ingrese sólo números.');
+        return false;
+    }
+    return true;
+}
 
-    // Validar que no sean 10 dígitos iguales en el teléfono
-    const primerDigito = dias[0];
-    const todosIguales = dias.split('').every(d => d === primerDigito);
-    if (todosIguales) return false;
+export function validarLugar(lugar) {
+    return typeof lugar === 'string' && lugar.trim().length > 0 && lugar.trim().length <= 150;
+}
 
+export function validarDias(dias) {
+    if (isNaN(dias) || dias.trim() === "") {
+        alert("Por favor ingrese sólo número.");
+        return false;
+    }
     return true;
 
 }
 
-export function validarNoches(noches){
-    const regex = /^\d{2}$/;
-    if (!regex.test(noches)) return false;
-
-    // Validar que no sean 10 dígitos iguales en el teléfono
-    const primerDigito = noches[0];
-    const todosIguales = noches.split('').every(d => d === primerDigito);
-    if (todosIguales) return false;
-
+export function validarNoches(noches) {
+    if (isNaN(noches) || noches.trim() === "") {
+        alert("Por favor ingrese sólo número.");
+        return false;
+    }
     return true;
 }
