@@ -52,7 +52,7 @@ if(!validarConfirmarContraseña(confpassword)){
 }
 
 if (mensajesError.length > 0) {
-        // Mostrando errores concatenados en el div
+    alertRegistro.style.display = "block";
     alertRegistro.classList.add("alert-danger");
     alertRegistro.innerHTML = mensajesError.join("<br>");
     return;
