@@ -28,7 +28,7 @@ export function validarContraseña(contraseña) {
 
 export function validarConfirmarContraseña(confirmarContraseña, contraseña) {
     if (contraseña !== confirmarContraseña) {
-        alert("La contraseña no coincide");
+        // alert("La contraseña no coincide");
         return false;
     }
     return true;

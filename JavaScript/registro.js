@@ -26,7 +26,7 @@ alertRegistro.innerHTML = "";
 
 let mensajesError = [];
 
-//condiciones de validaciones 
+//condiciones de validaciones
 if (!nombre_completo || !numeroDeTelefono || !correo || !password || !confpassword) {
     mensajesError.push("Todos los campos son obligatorios.");
   }
@@ -36,7 +36,7 @@ if (!validarNombre(nombre_completo)) {
     }
 
 if(!validarNumTelefono(numeroDeTelefono)){
-        mensajesError.push("El precio debe de ser un dato numérico");
+        mensajesError.push("El telefono debe de ser un dato numérico, debe tener 10 digitos, y no puede contener espacios ni guiones");
 }
 
 if(!validarEmail(correo)){
@@ -44,7 +44,7 @@ if(!validarEmail(correo)){
 }
 
 if(!validarContraseña(password)){
-        mensajesError.push("La contraseña debe contener------");
+        mensajesError.push("La contraseña debe contener un caracter especial, una mayuscula, una minuscula, un numero y tener entre 8 y 15 caracteres, $@$!%*?& y uno de estos caracteres especiales");
 }
 
 if(!validarConfirmarContraseña(confpassword, password)){
@@ -56,8 +56,8 @@ if (mensajesError.length > 0) {
     alertRegistro.classList.add("alert-danger");
     alertRegistro.innerHTML = mensajesError.join("<br>");
     return;
-} 
-        
+}
+
 // Mostrar mensaje de éxito
 alertRegistro.style.display = "block";
 alertRegistro.classList.add("alert-success");
@@ -80,10 +80,10 @@ confirmarContraseña.value = '';
       usuariosArray = JSON.parse(datosPrevios);
     }
 
-    //mostrar datos al cargar 
+    //mostrar datos al cargar
     mostrarUsuarios();
 
-    //Evento al hacer clic en el botón, carga los campos 
+    //Evento al hacer clic en el botón, carga los campos
     document.getElementById("btnEnviar").addEventListener("click", function () {
       // Obtener valores del formulario con esta forma
       // AGREGAR CONTRASEÑA
@@ -92,8 +92,8 @@ confirmarContraseña.value = '';
       const telefono = document.getElementById("numTelefono").value.trim();
       const email = document.getElementById("email").value.trim();
 
-      // Validar campos AQUI IRIA EL MENSAJE COMPLETO DE COMPLETA TODOS LOS CAMPOS Y 
-      // LAS OTRAS VALIDACIONES 
+      // Validar campos AQUI IRIA EL MENSAJE COMPLETO DE COMPLETA TODOS LOS CAMPOS Y
+      // LAS OTRAS VALIDACIONES
       //if (!nombre || !edad || !email) {
       //  alert("Por favor completa todos los campos.");
       //  return;
@@ -109,7 +109,7 @@ confirmarContraseña.value = '';
 
       //Agregar al array en memoria
       usuariosArray.push(usuario);
-  
+
 
       //Guardar en localStorage
       localStorage.setItem("usuarios", JSON.stringify(usuariosArray));
