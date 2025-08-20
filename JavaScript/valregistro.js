@@ -26,7 +26,7 @@ export function validarContraseña(contraseña) {
     return regex.test(contraseña);
 }
 
-export function validarConfirmarContraseña(confirmarContraseña) {
+export function validarConfirmarContraseña(confirmarContraseña, contraseña) {
     if (contraseña !== confirmarContraseña) {
         alert("La contraseña no coincide");
         return false;

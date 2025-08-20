@@ -47,7 +47,7 @@ if(!validarContraseña(password)){
         mensajesError.push("La contraseña debe contener------");
 }
 
-if(!validarConfirmarContraseña(confpassword)){
+if(!validarConfirmarContraseña(confpassword, password)){
         mensajesError.push("La contraseña no coincide, favor de verificar");
 }
 
@@ -70,9 +70,58 @@ email.value = '';
 contraseña.value = '';
 confirmarContraseña.value = '';
 
-
-
-
-
-
 });
+
+ // local store
+    let usuariosArray = [];
+
+    const datosPrevios = localStorage.getItem("usuarios");
+    if (datosPrevios) {
+      usuariosArray = JSON.parse(datosPrevios);
+    }
+
+    //mostrar datos al cargar 
+    mostrarUsuarios();
+
+    //Evento al hacer clic en el botón, carga los campos 
+    document.getElementById("btnEnviar").addEventListener("click", function () {
+      // Obtener valores del formulario con esta forma
+      // AGREGAR CONTRASEÑA
+      const contraseña=document.getElementById("contraseña").value.trim();
+      const nombre = document.getElementById("Nombre").value.trim();
+      const telefono = document.getElementById("numTelefono").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      // Validar campos AQUI IRIA EL MENSAJE COMPLETO DE COMPLETA TODOS LOS CAMPOS Y 
+      // LAS OTRAS VALIDACIONES 
+      //if (!nombre || !edad || !email) {
+      //  alert("Por favor completa todos los campos.");
+      //  return;
+      //}
+
+      //1- Crear objeto con los datos
+      const usuario = {
+        contraseña:contraseña,
+        nombre: nombre,
+        telefono: parseInt(telefono),
+        email: email
+      };
+
+      //Agregar al array en memoria
+      usuariosArray.push(usuario);
+  
+
+      //Guardar en localStorage
+      localStorage.setItem("usuarios", JSON.stringify(usuariosArray));
+
+      //Mostrar en pantalla
+      mostrarUsuarios();
+
+      //Limpiar el formulario
+      document.getElementById("formulario").reset();
+    });
+
+    //Función para mostrar los usuarios guardados
+    function mostrarUsuarios() {
+      document.getElementById("resultado").textContent = JSON.stringify(usuariosArray, null, 2);
+    }
