@@ -20,7 +20,7 @@ function addItem(item) {
                 '<li class="list-group-item"><i class="bi bi-airplane"></i> Vuelos</li>\n' +
                 '<li class="list-group-item"><i class="bi bi-buildings"></i> Hospedaje</li>\n' +
                 '<li class="list-group-item"><i class="bi bi-cup-hot"></i> Alimentos</li>\n' +
-                '<li class="list-group-item"><i class="bi bi-chat-dots"></i> Guia de habla hispana</li>\n' +
+                '<li class="list-group-item"><i class="bi bi-chat-dots"></i> Guía de habla hispana</li>\n' +
                 '<li class="list-group-item"><i class="bi bi-car-front"></i> Traslado</li>\n' +
                 '<li class="list-group-item"><i class="bi bi-geo-alt"></i> Visitas Guiadas</li>\n' +
               '</ul>\n' +
@@ -70,7 +70,7 @@ function addItem(item) {
         '</div>\n' +
         '<div class="modal-footer">\n' +
           '<a href="./contactanos.html">\n' +
-          '<button type="button" class="btn btn-primary">Contactanos</button>\n' +
+          '<button type="button" class="btn btn-primary">Contáctanos</button>\n' +
           '</a>\n' +
         '</div>\n' +
     '</div>\n' +

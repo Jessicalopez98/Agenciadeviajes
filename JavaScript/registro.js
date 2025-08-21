@@ -32,23 +32,23 @@ if (!nombre_completo || !numeroDeTelefono || !correo || !password || !confpasswo
   }
 
 if (!validarNombre(nombre_completo)) {
-        mensajesError.push("El nombre debe tener al menos 3 caracteres, ser texto y no contener carácteres especiales.");
+        mensajesError.push("El nombre debe tener al menos 3 caracteres, ser texto y no contener caracteres especiales.");
     }
 
 if(!validarNumTelefono(numeroDeTelefono)){
-        mensajesError.push("El telefono debe de ser un dato numérico, debe tener 10 digitos, y no puede contener espacios ni guiones");
+        mensajesError.push("El teléfono debe de ser un dato numérico, debe tener 10 dígitos, y no puede contener espacios ni guiones.");
 }
 
 if(!validarEmail(correo)){
-        mensajesError.push("El correo electrónico ingresado no es valido");
+        mensajesError.push("El correo electrónico ingresado no es válido.");
 }
 
 if(!validarContraseña(password)){
-        mensajesError.push("La contraseña debe cumplir con los requisitos especificados");
+        mensajesError.push("La contraseña debe cumplir con los requisitos especificados.");
 }
 
 if(!validarConfirmarContraseña(confpassword, password)){
-        mensajesError.push("La contraseña no coincide, favor de verificar");
+        mensajesError.push("La contraseña no coincide, favor de verificar.");
 }
 
 if (mensajesError.length > 0) {
