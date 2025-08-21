@@ -1,0 +1,79 @@
+.image-container {
+
+    position: relative;
+    display: block;
+    width: 100%;
+
+    height: 85vh;
+
+
+
+
+}
+
+.image-container img {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+ .overlay {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    padding: 2vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(97, 121, 226, 0.5);
+
+
+} 
+
+
+.overlay h1{
+    margin-left: 10px;
+    margin-right: 10px;;
+    bottom: 2%;
+    /* left: 30%; */
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(1.2rem, 3vw,2rem);
+    font-family: "League Spartan", sans-serif;
+    /* transform: translateX(-32%); */
+    width: 100%;
+
+  
+
+} 
+
+.card-body {
+    text-align: center;
+    justify-items: center;
+
+}
+
+
+
+.card-img-top.img-fluid {
+    width: 75%;
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card-text1 {
+    margin: 15px;
+}
+
+img.img-fluid {
+    max-width: 80;
+    height: auto;
+
+}
