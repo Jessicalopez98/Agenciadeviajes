@@ -1,14 +1,17 @@
 const piePagina = `
     <footer class="footer">
       <div class="footer-container">
-
+      <!-- Columna 1: Logo + Redes sociales -->
+      <div class="footer-column">
         <!-- Logo -->
         <div class="footer-logo">
           <img src="./assets/Logo-Nadia_Isotipo.png" alt="Logo NAD">
-          <p><br> BEST DREAMS<br>VACATIONS</p>
+          <p> BESTDREAMS<br>VACATIONS</p>
         </div>
-
+      </div>
+        
         <!-- Iconos de redes sociales -->
+        <div class="footer-column">
         <div class="footer-social">
           <a href="https://instagram.com/nadbestdreamsvacations" target="_blank" class="social-icon">
             <img src="./assets/IconoINSTAGRAM.png" alt="Instagram">
@@ -20,9 +23,11 @@ const piePagina = `
             <img src="./assets/IconoTIKTOK.png" alt="TikTok">
           </a>
         </div>
+       </div>
 
-        <!-- Información de contacto -->
+        <!-- Columna 2: Información de contacto -->
         <div class="footer-contact">
+        <div class="footer-column">
           <p class="contact-item">
             <img src="./assets/IconoWhatsApp.svg.png" alt="WhatsApp" class="contact-icon-img">
             <a href="https://wa.me/5277134742377" target="_blank" style="color: black; text-decoration: none;">
@@ -36,18 +41,44 @@ const piePagina = `
             </a>
           </p>
           <p class="contact-item">
-            <span class="contact-icon icon-location">📍</span>
-            <span>Pachuca, Hidalgo</span>
+            <span class="contact-icon icon-location" onclick="mostrarMapa()">📍</span>
+            <a onclick="mostrarMapa()" target="_blank">Pachuca, Hidalgo</a>            
           </p>
         </div>
-
-        <!-- Políticas -->
-        <div class="footer-links">
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Términos y Condiciones</a>
+        <!-- Contenedor del mapa (oculto al inicio) -->
+          <div class="mapa" id="mapa" style="display:none; margin-top:10px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3747.6172923766026!2d-98.75963952476924!3d20.066466681352868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDAzJzU5LjMiTiA5OMKwNDUnMjUuNCJX!5e0!3m2!1ses!2smx!4v1755744663016!5m2!1ses!2smx" 
+              width="300" 
+              height="100" 
+              tyle="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div> 
         </div>
+
+              
+        <!-- Columna 3: Términos y Políticas -->
+        <div class="footer-links">
+        <div class="footer-column">
+          <a href="https://www.megatravel.com.mx/info/politica-de-privacidad">Política de Privacidad</a>
+          <a href="https://www.megatravel.com.mx/info/terminos-y-condiciones">Términos y Condiciones</a>
+        </div>
+        </div>
+
+
+        
       </div>
+
+      <!-- Línea inferior -->
+        <div class="footer-bottom">
+          © 2025 NADBestDreamsVacations - Todos los derechos reservados
+        </div>
     </footer>
+    
+
 `
 const footer = document.getElementsByTagName("footer").item(0);
 footer.insertAdjacentHTML("afterbegin", piePagina);
