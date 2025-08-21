@@ -1,0 +1,30 @@
+
+#navBar {
+  background-color: #27538C !important; /* Azul profundo */
+}
+/* Texto de los links de la navbar */
+#navBar .nav-link {
+  color: #FFFFFF !important;   /* blanco sólido */
+}
+
+/* Texto del brand (logo) */
+#navBar .navbar-brand {
+  color: #FFFFFF !important;   /* blanco sólido */
+}
+
+/* Botones de la navbar */
+#navBar .btn-outline-light {
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Hover de los links */
+#navBar .nav-link:hover {
+  color: #A9D943 !important;  /* verde suave como acento */
+}
+
+/* Hover de los botones*/
+#navBar .btn-outline-light:hover {
+  background-color: #FFFFFF !important;
+  color: #27538C !important;   /* azul profundo para contraste */
+}
