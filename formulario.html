@@ -5,16 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gestión de Paquetes</title>
-
+  <link rel="icon" type="image/png" href="./assets/Logo-Nadia_Isotipo.png">
   <!-- Enlace al CSS -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- Tipografía  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -22,13 +19,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Link de icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-
-
-
 </head>
 
 <body>
@@ -57,27 +49,24 @@
         <span style="font-weight: 800;">+ </span> Crear nuevo paquete
       </button>
     </section>
-    <section class="mt-4" style="border: 1px solid #0000002e;">
-      <table>
-        <!-- Insertar tabla aquí -->
-        <table class="table">
-          <thead>
-            <tr>
-              <!-- <th scope="col">#</th> -->
-              <th scope="col">Nombre</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Lugares</th>
-              <th scope="col">Dias</th>
-              <th scope="col">Noches</th>
-              <!-- <th scope="col">Incluye</th> -->
-              <!-- <th scope="col">No Incluye</th> -->
-              <!-- <th scope="col">Estado</th> -->
-            </tr>
-          </thead>
-          <tbody id="tablaListaPaquetes">
+    <section class="mt-4" style="border: 1px solid #0000002e;border-radius: 12px;">
+      <table class="table" style="border-radius: 12px; overflow: hidden;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Lugares</th>
+            <th scope="col">Dias</th>
+            <th scope="col">Noches</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaListaPaquetes">
 
-          </tbody>
-        </table>
+        </tbody>
+      </table>
     </section>
 
   </main>
@@ -85,7 +74,7 @@
   <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="display: flex; flex-direction: column; align-items: start;">
+        <div class="modal-header" style="display: flex; flex-direction: column; align-items: start; padding-bottom: 0;">
           <h5 class="modal-title" style="font-family: League Spartan; font-optical-sizing: auto; font-weight: 700; font-style: normal; color:
       #27538c !important; text-align: center;">Crear paquetes</h5>
           <p style="font-weight: 200; text-align: center; font-size: small;">Completa la
@@ -95,31 +84,34 @@
           </p>
         </div>
         <div class="modal-body">
-          <label>Nombre<input id="iptName" type="text" class="input-group form-control"
-              placeholder="Viaje a Europa..."></label>
-          <label>Precio<input id="iptPrecio" class="input-group form-control" type="text"
-              placeholder="$123.45..."></label>
-          <label>Lugares<input id="iptLugar" class="input-group form-control" type="text"
-              placeholder="Que lugares vas a visitar"></label>
-          <label>Días<input id="iptDias" class="input-group form-control" type="text" placeholder="3 días..."></label>
-          <label>Noches<input id="iptNoches" class="input-group form-control" type="text"
-              placeholder="6 Noches..."></label>
-          <!-- <label>Estado
-            <select class="input-group form-control" name="" id="select-estado-creacion">
-              <option value="activo">Activo</option>
-              <option value="inactivo">Inactivo</option>
-            </select>
-          </label> -->
-          <label>Incluye<input id="iptIncluye" class="input-group form-control" type="text"
-              placeholder="Incluye..."></label>
-          <label>No Incluye<input id="iptNoIncluye" class="input-group form-control" type="text"
-              placeholder="No Incluye"></label>
-          <label>Cargar imagen<input class="input-group form-control" type="file"></label>
-          <div id="iptAlerta" class="alert alert-danger" role="alert" style="display:none; margin-top: 1rem;"></div>
-
+          <section style="width: 100%; display: grid; gap: 1rem; grid-template-columns: 1fr 1fr;">
+            <label>Nombre<input id="iptName" type="text" class="input-group form-control"
+                placeholder="Viaje a Europa..."></label>
+            <label>Precio<input id="iptPrecio" class="input-group form-control" type="number"
+                placeholder="$ 1,000.00"></label>
+            <label>Lugares<input id="iptLugar" class="input-group form-control" type="text"
+                placeholder="Que lugares vas a visitar"></label>
+            <label>Días<input id="iptDias" class="input-group form-control" type="number"
+                placeholder="3 días..."></label>
+            <label>Noches<input id="iptNoches" class="input-group form-control" type="number"
+                placeholder="6 Noches..."></label>
+            <label>Incluye<input id="iptIncluye" class="input-group form-control" type="text"
+                placeholder="Incluye..."></label>
+            <label>No Incluye<input id="iptNoIncluye" class="input-group form-control" type="text"
+                placeholder="No Incluye"></label>
+          </section>
+          <section style="width: 100%; display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1rem;">
+            <label>Cargar imagen
+              <input id="iptImagen" class="form-control" type="file" accept="image/*">
+              <small class="form-text text-muted"> *Máximo 2MB. Formatos: JPG, PNG, WebP</small>
+            </label>
+            <div id="imagePreview" style="border-radius: 12px;">
+            </div>
+            <div id="iptAlerta" class="alert" style="display:none;"></div>
+          </section>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger rounded-pill px-lg-4"
+          <button id="btnCerrar" type="button" class="btn btn-danger rounded-pill px-lg-4"
             style=" background-color: #d94375 !important;" data-bs-dismiss="modal">Cancelar</button>
           <button id="btnGuardar" type="button" class="btn btn-success rounded-pill px-lg-4"
             style=" background-color: #A9D943 !important;">Guardar</button>
@@ -128,7 +120,6 @@
     </div>
   </div>
   <!-- Link Bootstrap -->
-  <!-- <footer></footer> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./JavaScript/header.js"></script>
   <script type="module" src="./JavaScript/formulario.js"></script>
