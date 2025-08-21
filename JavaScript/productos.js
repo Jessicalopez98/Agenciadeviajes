@@ -40,7 +40,7 @@ function addItem(item) {
         '<div class="col-lg-6 col-sm">\n' +
             '<!-- boton -->\n' +
               '<div class="card-body" style="display: flex; justify-content: flex-start; align-items: end;">\n' +
-                `<button  style="border-radius: 31px; padding: .8rem 3.5rem; filter: drop-shadow(0 0 0.3rem #12313299);" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
+                `<button  style="border-radius: 31px; background-color: #A9D943; color: #FFFFFF; padding: .8rem 3.5rem; " type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
                 'Reservar\n' +
                 '</button>\n' +
               '</div>\n' +

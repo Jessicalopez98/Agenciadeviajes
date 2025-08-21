@@ -86,3 +86,46 @@ p {
     font-size: 0.9rem; 
   }
 }
+
+.form-label{
+   font-family: "Montserrat", sans-serif !important;
+    font-size: 22px !important;
+    color: #323232 !important;
+    font-weight: bold !important;
+}
+.col-form-label{
+  font-family: "Montserrat", sans-serif !important;
+    font-size: 22px !important;
+    color: #323232 !important;
+    font-weight: bold !important;
+}
+
+#numTelefono{
+  background-color: rgba(152, 191, 69, 0.4);
+  border: 1px solid rgba(152, 191, 69, 0.8);
+  color: #000;
+}
+
+#email{
+  background-color: rgba(152, 191, 69, 0.4);
+  border: 1px solid rgba(152, 191, 69, 0.8);
+  color: #000;
+}
+
+#Nombre{
+  background-color: rgba(152, 191, 69, 0.4);
+  border: 1px solid rgba(152, 191, 69, 0.8);
+  color: #000;
+}
+
+#confirmarContraseña{
+    background-color: rgba(152, 191, 69, 0.4);
+  border: 1px solid rgba(152, 191, 69, 0.8);
+  color: #000;
+}
+
+#contraseña{
+  background-color: rgba(152, 191, 69, 0.4);
+  border: 1px solid rgba(152, 191, 69, 0.8);
+  color: #000;
+}
