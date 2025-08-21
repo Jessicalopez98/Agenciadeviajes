@@ -1,0 +1,88 @@
+/*Body y fondo de la página */
+body {
+  background-image: url('../assets/background_acerca_de.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif !important; /* Fuente Montserrat */
+}
+
+/* Títulos H1 */
+h1 {
+  font-size: 4rem !important;
+  font-weight: 600 !important;
+  color: #3671BF !important;
+  font-family: "League Spartan", sans-serif; /* H1 mantiene League Spartan */
+  text-align: center;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  line-height: 1.1;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+}
+
+/* Contenedor de descripción */
+#descripcionProyecto {
+  background-color: #F2F2F2;
+  padding: 20px;
+}
+
+/* Texto destacado */
+#textoDestacado {
+  color: #27538C;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Párrafos */
+p {
+  font-size: 1.2rem; /* Texto un poquito más grande */
+  line-height: 1.6;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 25%; /* tu posición original en desktop */
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+      margin-top: 30%; /* ajusta si es necesario para móviles */
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #27538C !important; 
+  border-radius: 50% !important;        
+  width: 50px !important;
+  height: 50px !important;
+  background-size: 50% 50% !important;  
+  background-repeat: no-repeat !important;
+}
+
+/* Responsividad para texto general */
+@media (max-width: 768px) {
+  p, #textoDestacado {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  p, #textoDestacado {
+    font-size: 0.9rem; 
+  }
+}
