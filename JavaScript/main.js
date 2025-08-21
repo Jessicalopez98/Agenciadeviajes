@@ -32,7 +32,7 @@ btnEnviar.addEventListener("click", function(event) {
     }
 
     if (!validarTelefono(iptTelefono.value)) {
-        mensajesError.push("El teléfono debe contener 10 dígitos numéricos y no puede ser el mismo 10 veces.");
+        mensajesError.push("El teléfono debe contener 10 dígitos numéricos, no puede ser el mismo número 10 veces y no puede empezar con cero.");
     }
 
     if (!validarMensaje(iptMensaje.value)) {

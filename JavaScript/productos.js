@@ -11,6 +11,7 @@ function addItem(item) {
     'class="card-img-top" alt="Imagen de destino">\n' +
     '</header>\n' +
     '<footer-card>\n' +
+    //  '<h5 class="card-title" style="font-size:1.4rem"><p>Desde $'+ item.precio + ' USD por persona en habitación doble + IMP </p></h5> <!--aqui-->\n' +
     '<h5 class="card-title" style="font-size:1.4rem">' + item.precio + '</h5> <!--aqui-->\n' +
 
       '<div class="row">\n' +

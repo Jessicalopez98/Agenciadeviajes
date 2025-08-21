@@ -32,7 +32,7 @@ if (!nombre_completo || !numeroDeTelefono || !correo || !password || !confpasswo
   }
 
 if (!validarNombre(nombre_completo)) {
-        mensajesError.push("El nombre debe tener al menos 3 caracteres y ser texto.");
+        mensajesError.push("El nombre debe tener al menos 3 caracteres, ser texto y no contener carácteres especiales.");
     }
 
 if(!validarNumTelefono(numeroDeTelefono)){
@@ -44,7 +44,7 @@ if(!validarEmail(correo)){
 }
 
 if(!validarContraseña(password)){
-        mensajesError.push("La contraseña debe contener un caracter especial, una mayuscula, una minuscula, un numero y tener entre 8 y 15 caracteres, $@$!%*?& y uno de estos caracteres especiales");
+        mensajesError.push("La contraseña debe cumplir con los requisitos especificados");
 }
 
 if(!validarConfirmarContraseña(confpassword, password)){
@@ -70,58 +70,33 @@ email.value = '';
 contraseña.value = '';
 confirmarContraseña.value = '';
 
+
+const usuario = {
+    nombre: nombre_completo,
+    telefono: numeroDeTelefono,
+    email: correo,
+    contraseña: password
+  };
+
+  // Recuperar array anterior o crear uno nuevo
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  // Agregar el nuevo usuario
+  usuarios.push(usuario);
+
+  // Guardar en localStorage
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+  // Mostrar mensaje de éxito
+  alertRegistro.style.display = "block";
+  alertRegistro.classList.add("alert-success");
+  alertRegistro.innerHTML = "¡Formulario enviado correctamente!";
+
+  // Limpiar campos
+  Nombre.value = '';
+  numTelefono.value = '';
+  email.value = '';
+  contraseña.value = '';
+  confirmarContraseña.value = '';
 });
 
- // local store
-    let usuariosArray = [];
-
-    const datosPrevios = localStorage.getItem("usuarios");
-    if (datosPrevios) {
-      usuariosArray = JSON.parse(datosPrevios);
-    }
-
-    //mostrar datos al cargar
-    mostrarUsuarios();
-
-    //Evento al hacer clic en el botón, carga los campos
-    document.getElementById("btnEnviar").addEventListener("click", function () {
-      // Obtener valores del formulario con esta forma
-      // AGREGAR CONTRASEÑA
-      const contraseña=document.getElementById("contraseña").value.trim();
-      const nombre = document.getElementById("Nombre").value.trim();
-      const telefono = document.getElementById("numTelefono").value.trim();
-      const email = document.getElementById("email").value.trim();
-
-      // Validar campos AQUI IRIA EL MENSAJE COMPLETO DE COMPLETA TODOS LOS CAMPOS Y
-      // LAS OTRAS VALIDACIONES
-      //if (!nombre || !edad || !email) {
-      //  alert("Por favor completa todos los campos.");
-      //  return;
-      //}
-
-      //1- Crear objeto con los datos
-      const usuario = {
-        contraseña:contraseña,
-        nombre: nombre,
-        telefono: parseInt(telefono),
-        email: email
-      };
-
-      //Agregar al array en memoria
-      usuariosArray.push(usuario);
-
-
-      //Guardar en localStorage
-      localStorage.setItem("usuarios", JSON.stringify(usuariosArray));
-
-      //Mostrar en pantalla
-      mostrarUsuarios();
-
-      //Limpiar el formulario
-      document.getElementById("formulario").reset();
-    });
-
-    //Función para mostrar los usuarios guardados
-    function mostrarUsuarios() {
-      document.getElementById("resultado").textContent = JSON.stringify(usuariosArray, null, 2);
-    }

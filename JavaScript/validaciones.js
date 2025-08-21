@@ -12,7 +12,7 @@ export function validarEmail(email) {
 }
 
 export function validarTelefono(telefono) {
-    const regex = /^\d{10}$/;
+    const regex = /^(?!(\d)\1{9}$)[1-9]\d{9}$/;
     if (!regex.test(telefono)) return false;
 
     // Validar que no sean 10 dígitos iguales en el teléfono
