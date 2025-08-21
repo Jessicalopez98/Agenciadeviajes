@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // creamos un Id para el nuevo paquete
     const nuevoId = paquetes.length + 1;
     // agregamos el nuevo paquete a la lista
-    paquetes.push({ id: nuevoId, titulo, precio, lugar, dias, noches, noincluye, incluye, img: urlCloudinary });
+    paquetes.push({ id: nuevoId, titulo, precio, lugar, dias, noches, noincluye, incluye, img: urlCloudinary , duracion: `${dias} días | ${noches} noches` });
     // actualizamos el localStorage con el nuevo paquete
     localStorage.setItem("paquetes", JSON.stringify(paquetes));
 
