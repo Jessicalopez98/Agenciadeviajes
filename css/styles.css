@@ -176,12 +176,17 @@ h1 {
 
 /*Forma Responsiva*/
 @media (max-width: 768px) {
+  .header-container,
   .footer-container,
+  .main-container,
   .card-footer {
     flex-direction: column;
     text-align: center;
   }
 
+  .navbar {
+  text-align: center;
+}
   .list-group-item,
   .list-unstyled {
     flex-direction: column;
@@ -221,10 +226,24 @@ h1 {
   }
 
   div.container {
+    flex-direction: row;
     grid-template-columns: auto;
     text-align: center;
   }
+  div.table-responsive{
+    flex-direction: row;
+    text-align: center;
+  }
+
 }
+
+@media (max-width: 600px) {
+  th, td {
+    padding: 8px;       /* reduce padding en móviles */
+  }
+}
+
+
 
 .image-hover {
   overflow: hidden;

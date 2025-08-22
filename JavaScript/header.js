@@ -30,6 +30,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
           <button class="btn btn-outline-light me-2" type="button">
             🔔
           </button>
+          <a href="./formulario.html">
           <button class="btn btn-outline-light me-2" type="button">
             ⚙️
           </button>
