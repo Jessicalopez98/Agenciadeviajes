@@ -5,7 +5,7 @@ const piePagina = `
       <div class="footer-column">
         <!-- Logo -->
         <div class="footer-logo">
-          <img src="./assets/Logo-Nadia_Isotipo.png" alt="Logo NAD">
+          <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824177/Logo-Nadia_Isotipo_esidic.png" alt="Logo NAD">
           <p> BESTDREAMS<br>VACATIONS</p>
         </div>
       </div>
@@ -14,13 +14,13 @@ const piePagina = `
         <div class="footer-column">
         <div class="footer-social">
           <a href="https://instagram.com/nadbestdreamsvacations" target="_blank" class="social-icon">
-            <img src="./assets/IconoINSTAGRAM.png" alt="Instagram">
+            <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824176/IconoINSTAGRAM_q0gla0.png" alt="Instagram">
           </a>
           <a href="https://www.facebook.com/share/1LBy2YZcR4/" target="_blank" class="social-icon">
-            <img src="./assets/IconoFACEBOOK.png" alt="Facebook">
+            <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824176/IconoFACEBOOK_hqkj2c.png" alt="Facebook">
           </a>
           <a href="https://www.tiktok.com/@nadbestdreamsvacations" target="_blank" class="social-icon">
-            <img src="./assets/IconoTIKTOK.png" alt="TikTok">
+            <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824176/IconoTIKTOK_d9uan8.png" alt="TikTok">
           </a>
         </div>
        </div>
@@ -29,7 +29,7 @@ const piePagina = `
         <div class="footer-contact">
         <div class="footer-column">
           <p class="contact-item">
-            <img src="./assets/IconoWhatsApp.svg.png" alt="WhatsApp" class="contact-icon-img">
+            <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824177/IconoWhatsApp.svg_zm2lfa.png" alt="WhatsApp" class="contact-icon-img">
             <a href="https://wa.me/5277134742377" target="_blank" style="color: black; text-decoration: none;">
               (+52) 771 34 74 237
             </a>

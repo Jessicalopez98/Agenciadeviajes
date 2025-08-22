@@ -2,7 +2,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
     <div class="container">
       <!-- Logo-->
        <a href="./index.html">
-       <img src="./assets/Logo Nadia_ solo Isotipo.png" alt="NAD Logo" width="70" height="70">
+       <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824177/Logo_Nadia__solo_Isotipo_p55llq.png" alt="NAD Logo" width="70" height="70">
       </a>
 
       <!-- -->
