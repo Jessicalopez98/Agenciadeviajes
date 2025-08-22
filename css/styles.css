@@ -176,12 +176,17 @@ h1 {
 
 /*Forma Responsiva*/
 @media (max-width: 768px) {
+  .header-container,
   .footer-container,
+  .main-container,
   .card-footer {
     flex-direction: column;
     text-align: center;
   }
 
+  .navbar {
+  text-align: center;
+}
   .list-group-item,
   .list-unstyled {
     flex-direction: column;
@@ -221,10 +226,24 @@ h1 {
   }
 
   div.container {
+    flex-direction: row;
     grid-template-columns: auto;
     text-align: center;
   }
+  div.table-responsive{
+    flex-direction: row;
+    text-align: center;
+  }
+
 }
+
+@media (max-width: 600px) {
+  th, td {
+    padding: 8px;       /* reduce padding en móviles */
+  }
+}
+
+
 
 .image-hover {
   overflow: hidden;
@@ -341,3 +360,77 @@ article > header {
 h5 {
   font-size: 20px;
 }
+
+.table-wrapper {
+  overflow-x: auto;     /* permite scroll horizontal en pantallas pequeñas */
+}
+
+/*table {
+  /* ocupa todo el ancho del container */
+  /*order-collapse: collapse;
+}*/
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* seccion tabla*/
+
+.tabla-seccion {
+  border: 1px solid #0000002e;
+  border-radius: 12px;
+  padding: 10px 0;
+}
+
+.tabla-wrapper {
+  border-radius: 12px;
+  overflow-x: auto; /* scroll horizontal en móviles */
+}
+
+/* Opcional: que la tabla ocupe todo el ancho */
+.table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Estilo de celdas */
+.table th, .table td {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Bordes redondeados en el header */
+.table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+.table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Bordes redondeados en el footer si existe */
+.table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* Responsive texto más pequeño en pantallas pequeñas */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}
+
+.thead-azul th {
+  background-color: #27538c !important; /* azul deseado */
+  color: white !important;               /* texto blanco */
+  border-color: #27538c !important;     /* opcional, que los bordes coincidan */
+}
+
+

@@ -44,7 +44,7 @@ const piePagina = `
             <span class="contact-icon icon-location" onclick="mostrarMapa()">📍</span>
             <a onclick="mostrarMapa()" target="_blank">Pachuca, Hidalgo</a>            
           </p>
-        </div>
+        
         <!-- Contenedor del mapa (oculto al inicio) -->
           <div class="mapa" id="mapa" style="display:none; margin-top:10px;">
             <iframe 
@@ -56,6 +56,7 @@ const piePagina = `
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
+          </div>
           </div> 
         </div>
 
@@ -74,7 +75,7 @@ const piePagina = `
 
       <!-- Línea inferior -->
         <div class="footer-bottom">
-          © 2025 NADBestDreamsVacations - Todos los derechos reservados
+          © 2025 NADBestDreamsVacations - derechos reservados
         </div>
     </footer>
     
