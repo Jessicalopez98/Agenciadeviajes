@@ -2,7 +2,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
     <div class="container">
       <!-- Logo-->
        <a href="./index.html">
-       <img src="./assets/Logo Nadia_ solo Isotipo.png" alt="NAD Logo" width="70" height="70">
+       <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824177/Logo_Nadia__solo_Isotipo_p55llq.png" alt="NAD Logo" width="70" height="70">
       </a>
 
       <!-- -->
@@ -15,7 +15,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-4">
           <li class="nav-item mx-5" id="acercaNosotras">
-            <a class="nav-link text-white fw-medium" href="./Acercadenosotras.html">Acerca de Nosotros</a>
+            <a class="nav-link text-white fw-medium" href="./AcercadenosotrasSam.html">Acerca de Nosotros</a>
           </li>
           <li class="nav-item mx-5">
             <a class="nav-link text-white fw-medium" href="./listaProductos.html">Paquetes</a>
