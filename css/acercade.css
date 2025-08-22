@@ -1,6 +1,6 @@
 /*Body y fondo de la página */
 body {
-  background-image: url('../assets/background_acerca_de.png');
+  /* background-image: url('./assets/background_acerca_de.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@ p {
 @media (max-width: 576px) {
   .carousel-control-prev,
   .carousel-control-next {
-      margin-top: 30%; /* ajusta si es necesario para móviles */
+      margin-top: 10%; /* ajusta si es necesario para móviles */
   }
 }
 
@@ -72,6 +72,7 @@ p {
   height: 50px !important;
   background-size: 50% 50% !important;  
   background-repeat: no-repeat !important;
+  size-adjust: 10%;
 }
 
 /* Responsividad para texto general */
