@@ -4,7 +4,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   font-family: 'Montserrat', sans-serif !important; /* Fuente Montserrat */
 }
 
@@ -58,11 +57,12 @@ p {
 }
 
 /*Cambios para centrar los controles dentro del carousel*/
-#carouselExample.carousel-control-prev,
-#carouselExample.carousel-control-next {
+#carouselExample .carousel-control-prev,
+#carouselExample .carousel-control-next {
   top: 50%;
   transform: translateY(-50%);
-  margin-top: 0; /* elimina el hack del margin */
+  margin-top: 0;
+  z-index: 5;  /* por encima de imagen; overlay queda en 2 */
 }
 
 @media (max-width: 576px) {
@@ -80,14 +80,13 @@ p {
   height: 50px;
   background-size: 50% 50%;  
   background-repeat: no-repeat;
-  size-adjust: 10%;
 }
 
 .card{
   overflow: hidden;
 }
 
-.card-img{
+.card-img, .card-img-top {
   width: 100%;
   height: 100%;
   object-fit: cover;
