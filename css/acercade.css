@@ -52,9 +52,17 @@ p {
   line-height: 1.6;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    margin-top: 25%; /* tu posición original en desktop */
+#carouselExample{
+  position: relative;
+  overflow: hidden; /*Recorta botones y controles, de forma que se conserven dentro de carouselExample*/
+}
+
+/*Cambios para centrar los controles dentro del carousel*/
+#carouselExample.carousel-control-prev,
+#carouselExample.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0; /* elimina el hack del margin */
 }
 
 @media (max-width: 576px) {
@@ -63,16 +71,26 @@ p {
       margin-top: 10%; /* ajusta si es necesario para móviles */
   }
 }
-
+/*Se elimina !important como buena practica para evitar afectacion de posiciones relativas*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #27538C !important; 
-  border-radius: 50% !important;        
-  width: 50px !important;
-  height: 50px !important;
-  background-size: 50% 50% !important;  
-  background-repeat: no-repeat !important;
+  background-color: #27538C; 
+  border-radius: 50%;        
+  width: 50px;
+  height: 50px;
+  background-size: 50% 50%;  
+  background-repeat: no-repeat;
   size-adjust: 10%;
+}
+
+.card{
+  overflow: hidden;
+}
+
+.card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Responsividad para texto general */
