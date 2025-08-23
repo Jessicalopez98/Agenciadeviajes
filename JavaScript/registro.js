@@ -36,11 +36,11 @@ if (!validarNombre(nombre_completo)) {
     }
 
 if(!validarNumTelefono(numeroDeTelefono)){
-        mensajesError.push("El teléfono debe de ser un dato numérico, debe tener 10 dígitos, y no puede contener espacios ni guiones.");
+        mensajesError.push("El teléfono debe de ser un dato numérico, debe tener 10 dígitos, y no puede contener espacios ni guiones ni iniciar con 0.");
 }
 
 if(!validarEmail(correo)){
-        mensajesError.push("El correo electrónico ingresado no es válido.");
+        mensajesError.push("El correo electrónico ingresado no es válido, name@example.com");
 }
 
 if(!validarContraseña(password)){

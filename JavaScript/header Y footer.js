@@ -72,6 +72,12 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
   background-color: #FFFFFF !important;
   color: #27538C !important;   /* azul profundo para contraste */
 }
+  .nav-item {
+  font-size: 25px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  gap: 4rem;
+}
   </style>`;
 
 const body = document.getElementsByTagName ("body"). item(0) ;
