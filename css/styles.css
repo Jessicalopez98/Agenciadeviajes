@@ -245,7 +245,7 @@ h1 {
 
 .text {
   padding: 15px;
-  text-align: center;
+  text-align: justify;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -376,6 +376,42 @@ h5 {
   visibility: visible;
   padding: 16px 12px 20px;       /* ahora sí padding */
   transition: transform .35s ease, opacity .35s ease, visibility 0s;
+  border-top-left-radius: 9vw;
+border-top-right-radius: 9vw;
+}
+
+/*Para centrar texto dentro del overlay*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;      
+  padding: 1rem;
+}
+
+/*Responsivo escritorio*/
+@media (min-width: 1024px) {
+  .overlay-text {
+    max-width: 60%;
+    font-size: 1rem;
+  }
+}
+
+/*Responsivo para móvil*/
+@media (max-width: 480px) {
+  .overlay-text {
+    max-width: 95%;
+    font-size: 1rem;
+  }
 }
 
 /* .overlay-text { margin-top: 8px; } */
