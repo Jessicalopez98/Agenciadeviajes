@@ -1,6 +1,6 @@
 /*Body y fondo de la página */
 body {
-  /* background-image: url('./assets/background_acerca_de.png'); */
+  background-image: url(../assets/background_acerca_de.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
