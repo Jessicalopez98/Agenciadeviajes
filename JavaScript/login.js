@@ -1,0 +1,33 @@
+let intentos = 0;
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Para que no se refesque la página antes
+
+  const email = document.getElementById("correoLogin").value;
+  const password = document.getElementById("contrasenaLogin").value;
+  const alertLogin = document.getElementById("alertLogin");
+
+  // Recuperar usuarios guardados
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  // Buscar usuario que coincida
+  const usuarioEncontrado = usuarios.find(
+    u => u.email === email && u.contraseña === password
+  );
+
+  if (usuarioEncontrado) {
+    alertLogin.className = "alert alert-success";
+    alertLogin.innerHTML = `✅ Bienvenido, ${usuarioEncontrado.nombre}`;
+    intentos = 0; // Reinicia intentos
+
+  } else {
+    intentos++;
+    alertLogin.className = "alert alert-danger";
+    alertLogin.innerHTML = `Correo o contraseña incorrectos. Intento ${intentos} de 3.`;
+
+    if (intentos >= 3) {
+      alertLogin.innerHTML += `<br>¿Has olvidado tu contraseña? <a href="./Recuperar.html">Recupérala aquí</a>`;
+    }
+  }
+});
+
