@@ -19,6 +19,10 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     alertLogin.className = "alert alert-success";
     alertLogin.innerHTML = `✅ Bienvenido, ${usuarioEncontrado.nombre}`;
     intentos = 0; // Reinicia intentos
+    //redireccionar a Index una vez inciada sesión
+      setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
 
   } else {
     intentos++;
