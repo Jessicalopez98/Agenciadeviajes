@@ -1,79 +1,227 @@
-.image-container {
+body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      color: #27538C;
+    }
 
-    position: relative;
-    display: block;
-    width: 100%;
-
-    height: 85vh;
-
+h1, h2, h3, h4 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+    }
 
 
+.hero {
+      background: url('https://res.cloudinary.com/dte9mtmma/image/upload/v1756051242/95e7d963-79dc-46f5-9388-4a128a086b2a_3_iwzhdq.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
 
+
+.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+
+.hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+
+.hero .form-control, .hero .btn {
+      border-radius: 8px;
+    }
+
+
+.service-card, .destino-card, .porque-card, .testimonio-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+
+
+.service-icon {
+      font-size: 2rem;
+      color: #98BF45;
+    }
+
+
+.cta {
+      background: #27538C;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin: 40px 0;
+    }
+
+    
+
+#navBar {
+  background-color: #27538C !important; /* Azul profundo */
+}
+/* Texto de los links de la navbar */
+#navBar .nav-link {
+  color: #FFFFFF !important;   /* blanco sólido */
 }
 
-.image-container img {
+/* Texto del brand (logo) */
+#navBar .navbar-brand {
+  color: #FFFFFF !important;   /* blanco sólido */
+}
 
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Botones de la navbar */
+#navBar .btn-outline-light {
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Hover de los links */
+#navBar .nav-link:hover {
+  color: #A9D943 !important;  /* verde suave como acento */
+}
+
+/* Hover de los botones*/
+#navBar .btn-outline-light:hover {
+  background-color: #FFFFFF !important;
+  color: #27538C !important;   /* azul profundo para contraste */
+}
+  .nav-item {
+  font-size: 25px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  gap: 4rem;
+}
+
+  .contact-item {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+  .footer {
+  background-color: #d9d9d9;
+  color: black;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  color: black;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+  .footer-logo {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.footer-logo p {
+  font-weight: bold;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-social {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 2rem;
+  color: black;
 }
 
 
- .overlay {
-    position: absolute;
-    align-items: center;
+
+
+/*Forma Responsiva*/
+@media (max-width: 768px) {
+  .header-container,
+  .footer-container,
+  .main-container,
+  .card-footer {
+    flex-direction: column;
     text-align: center;
-    padding: 2vw;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(97, 121, 226, 0.5);
+  }
 
+  .navbar {
+  text-align: center;
+}
+  .list-group-item,
+  .list-unstyled {
+    flex-direction: column;
+    text-align: left;
+  }
 
-} 
+  .footer-logo,
+  .footer-social,
+  .footer-contact,
+  .footer-links {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 
+  .footer-social {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-.overlay h1{
-    margin-left: 10px;
-    margin-right: 10px;;
-    bottom: 2%;
-    /* left: 30%; */
-    position: absolute;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: clamp(1.2rem, 3vw,2rem);
-    font-family: "League Spartan", sans-serif;
-    /* transform: translateX(-32%); */
-    width: 100%;
+  .footer-bottom {
+    flex-direction: row;
+    text-align: center; /* Espacio entre elementos */
+  }
 
-  
-
-} 
-
-.card-body {
+  .footer-links {
+    flex-direction: row;
     text-align: center;
-    justify-items: center;
+  }
+
+  .mapa {
+    flex-direction: row;
+    text-align: center;
+  }
+  .footer-contact {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  div.container {
+    flex-direction: row;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  div.table-responsive{
+    flex-direction: row;
+    text-align: center;
+  }
 
 }
 
-
-
-.card-img-top.img-fluid {
-    width: 75%;
-    height: 180px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.card-text1 {
-    margin: 15px;
-}
-
-img.img-fluid {
-    max-width: 80;
-    height: auto;
-
+@media (max-width: 600px) {
+  th, td {
+    padding: 8px;       /* reduce padding en móviles */
+  }
 }
