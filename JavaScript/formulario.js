@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <td><img src="${paquete.img}" style="width:60px; border-radius:6px;"></td>
       <td>
         <button class="btn btn-danger rounded-pill px-lg-4"
-            style=" background-color: #d94375 !important;" onclick="eliminarPaquete(${paquete.id})">Eliminar</button>
+            style=" background-color: #d94375 !important; border-color: #d94375;" onclick="eliminarPaquete(${paquete.id})">Eliminar</button>
       </td>
     `;
     tablaListaPaquetes.appendChild(fila);
