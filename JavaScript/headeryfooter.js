@@ -27,9 +27,11 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
 
         <!-- iconos -->
         <div class="d-flex">
+        <a>
           <button class="btn btn-outline-light me-2" type="button">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
           </button>
+          </a>
           <a href="./formulario.html">
           <button class="btn btn-outline-light me-2" type="button">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
@@ -429,6 +431,7 @@ const piePagina = `
 //   }
 // });
 
+// OCULTA EL BOTON DE REGISTRO SI HAY SESION INICIADA
 document.addEventListener("DOMContentLoaded", () => {
   const btnRegistro = document.getElementById("btnRegistro");
   let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
@@ -440,18 +443,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// FUNCIONALIDAD DEL BOTON CERRAR SESION CUANDO HAY SESION INICIADA
 document.addEventListener("DOMContentLoaded", () => {
   const cerrarSesion = document.getElementById("cerrarSesion");
   let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
   if (usuarioActivo) {
     cerrarSesion.style.display = "block"; // Muestra el botón si hay sesión activa
+    cerrarSesion.insertAdjacentHTML("afterbegin", `Cerrar sesión, ${usuarioActivo.nombre.split(" ")[0]}`); // Muestra el nombre del usuario
   } else {
     cerrarSesion.style.display = "none"; // Oculta el botón si no hay sesión activa
   }
   cerrarSesion.addEventListener("click", () => {
+    const body = document.getElementsByTagName("body").item(0);
+    body.insertAdjacentHTML("afterbegin", `<div class="alert alert-success alert-dismissible fade show" role="alert" style="text-align: center;">
+    <strong>✔ Has cerrado sesión correctamente.</strong> Redirigiendo a la página de inicio...
+    </div>`);
+    cerrarSesion.style.display = "none"; // Oculta el botón al cerrar sesión
     localStorage.removeItem("usuarioActivo"); // Elimina la sesión activa
-    alert("Has cerrado sesión.");
-    window.location.href = "index.html"; // Redirige a la página de inicio
+    setTimeout(() => {
+      window.location.href = "index.html"; // Redirige a la página de inicio después de 2 segundos
+    }, 1200);
   });
 });
 
