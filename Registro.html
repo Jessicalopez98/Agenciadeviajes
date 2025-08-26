@@ -13,7 +13,11 @@
 </head>
 
 <body>
-  <h1> Registro de usuario </h1>
+  <div id="hero-registro">
+    <div class="overlay"></div>
+
+    <h1 id="hero-texto"> Registro de usuario </h1>
+  </div>
 
   <form>
     <br>
@@ -61,19 +65,36 @@
         </div>
       </div>
       <br>
-      <button type="submit" class="btn btn-light" id="btnEnviar"
-        style="border-radius: 31px; background-color: #A9D943; color: #FFFFFF; padding: .8rem 3.5rem; ">Enviar</button>
+      <button type="submit" class="btn btn-light" id="btnEnviar">Crear
+        usuario <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-user-plus">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M16 19h6" />
+          <path d="M19 16v6" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+        </svg>
+      </button>
 
     </div>
 
   </form>
 
 
-<!-- Enlace a login -->
-<div class="text-center mt-4">
-  <p>¿Ya tienes cuenta?</p>
-  <a href="./Login.html" class="btn btn-outline-primary">Iniciar sesión</a>
-</div>
+  <!-- Enlace a login -->
+  <div class="text-center mt-4">
+    <p>¿Ya tienes cuenta?</p>
+    <a href="./Login.html" class="btn" id="iniciarSesionBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-login">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M15 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+        <path d="M21 12h-13l3 -3" />
+        <path d="M11 15l-3 -3" />
+      </svg> Iniciar
+      sesión</a>
+  </div>
 
 
   <!-- local store -->
@@ -81,15 +102,69 @@
 
   <pre id="resultado"></pre>
 
+  <style>
+    #iniciarSesionBtn {
+      border-radius: 31px;
+      border: 2px solid #A9D943;
+      color: black;
+      padding: .8rem 3.5rem;
+      gap: 0.5rem;
+    }
 
+    #iniciarSesionBtn:hover {
+      border: 2px solid #cbff5a;
+      color: white;
+      background-color: #A9D943;
+      font-weight: 700;
+    }
+
+    #btnEnviar {
+      border-radius: 31px;
+      background-color: #A9D943;
+      color: #FFFFFF;
+      padding: .8rem 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #btnEnviar:hover {
+      background-color: #9cc446;
+    }
+
+    #hero-registro {
+      position: relative;
+      background-image: url('../assets/registro_fondo.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      height: 200px;
+      display: grid;
+      align-items: center;
+    }
+
+    #hero-texto {
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.457);
+      z-index: 0;
+      backdrop-filter: blur(7px);
+    }
+  </style>
+  <footer> </footer>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+  <!-- Enlaces de java -->
+  <script src="./JavaScript/headeryfooter.js">Header</script>
+  <script type="module" src="./JavaScript/registro.js"></script>
 </body>
-
-<footer> </footer>
-<!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-
-<!-- Enlaces de java -->
-<script src="./JavaScript/headeryfooter.js">Header</script>
-<script type="module" src="./JavaScript/registro.js"></script>
 
 </html>

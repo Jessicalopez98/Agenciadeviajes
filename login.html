@@ -12,50 +12,36 @@
   <link rel="stylesheet" href="./css/login.css">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
   <h1 class="text-center mt-4">Bienvenido</h1>
   <br>
-  <div class="container">
+  <div class="container" id="contenedorPadre" style="height: 70vh;">
 
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-sm-12">
-        <form id="loginForm">
-
-          <div id="cuadroLogin" class="container">
-            <p>Inicia Sesión con tu Usuario y Contraseña</p>
-            <div class="mb-3">
-              <label for="correoLogin" class="form-label">Email</label>
-              <input type="email" class="form-control" id="correoLogin" aria-describedby="emailHelp"
-                placeholder="example@dominio.com">
-              <div id="emailHelp" class="form-text">Nunca compartiremos tu información con nadie.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="contrasenaLogin" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="contrasenaLogin" placeholder="Contraseña">
-            </div>
-            </br>
-            <button type="submit" class="btn btn-light" id="btnEnviar"
-              style="border-radius: 5px; background-color: #FFFFFF; color: #0a0a0a; padding: .4rem 2.5rem; margin-top:2rem; font-size: 20px;">Iniciar
-              Sesión</button>
-          </div>
-
-        </form>
-
-        <!-- Aquí mostramos mensajes -->
-        <div id="alertLogin" class="mt-3 text-center"></div>
-      </div>
-
-
-      <div class="col-lg-6 col-sm-12">
-        <div id="textoLogin" class="container">
-          <p id="primerParrafo">Si aun no cuentas con uno, te invitamos a </p>
-          <a id="enlaceRegistro" href="./Registro.html">Registrarte</a>
+    <form id="loginForm">
+      <p>Inicia Sesión con tu Usuario y Contraseña</p>
+      <div>
+        <label for="correoLogin" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correoLogin" aria-describedby="emailHelp"
+          placeholder="example@dominio.com">
+        <div id="emailHelp" class="form-text">Nunca compartiremos tu información con nadie.
         </div>
-
       </div>
+      <div>
+        <label for="contrasenaLogin" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contrasenaLogin" placeholder="Contraseña">
+      </div>
+      </br>
+      <button type="submit" class="btn" id="btnEnviar">Iniciar
+        Sesión</button>
+      <!-- Aquí mostramos mensajes -->
+      <div id="alertLogin"></div>
+    </form>
 
-    </div> <!-- div todo el contendor -->
+
+    <div id="textoLogin">
+      <p id="primerParrafo">Si aun no cuentas con uno, te invitamos a </p>
+      <a id="enlaceRegistro" href="./Registro.html">Registrarte</a>
+    </div>
 
   </div>
 

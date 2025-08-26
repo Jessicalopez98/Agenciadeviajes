@@ -1,19 +1,19 @@
 
 body{
     background-image:url(../assets/micky.jpeg);
-      background-size: cover;   
-      background-position: center; 
-      background-repeat: no-repeat; 
-      width: 100vw; 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100vw;
       margin: 0;
 }
 
 /* Títulos H1 */
 h1 {
-  font-size: 3rem !important; 
+  font-size: 3rem !important;
   font-weight: 600 !important;
   color: #d7dadf !important;
-  font-family: "League Spartan", sans-serif; 
+  font-family: "League Spartan", sans-serif;
   text-align: center;
   text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
   line-height: 1.1;
@@ -31,7 +31,7 @@ h1 {
   h1 {
     font-size: 3rem !important;
   }
-} 
+}
 
 #correoLogin{
   background-color: rgba(152, 191, 69, 0.4);
@@ -74,7 +74,7 @@ p{
     font-family: "Montserrat", sans-serif !important;
     font-size: 20px !important;
     color: #323232 !important;
-  
+
 
 }
 
@@ -87,32 +87,68 @@ p{
 
 }
 
-#textoLogin {
-  align-content: center;
-  padding: 15px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 20rem;
-  height: 10rem;
-  border-color: #3671BF;
-  border-width: 3px;
-  border-style: solid;
-
-
-}
-
-
 #enlaceRegistro {
   display: flex;
   font-family: "Montserrat", sans-serif !important;
-  font-size: 20px !important;
   justify-content: center;
-  border-radius: 4px;
   background-color: #FFFFFF;
   color: #0a0a0a;
-  padding: .3rem 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-
+  text-decoration: none;
+  max-width: 10rem;
 }
 
+ #btnEnviar {
+      border-radius: 31px;
+      background-color: #A9D943;
+      color: #FFFFFF;
+      padding: .8rem 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #btnEnviar:hover {
+      background-color: #9cc446;
+    }
+
+    #enlaceRegistro {
+      border-radius: 31px;
+      background-color: #A9D943;
+      color: #FFFFFF;
+      padding: .8rem 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #enlaceRegistro:hover {
+      background-color: #9cc446;
+    }
+
+    #loginForm {
+      border: 3px solid #3671BF;
+      padding: 2rem;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    #textoLogin {
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 3px solid #3671BF;
+      padding: 2rem;
+      max-height: 11rem;
+    }
+
+    #contenedorPadre {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #alertLogin {
+      font-family: "Montserrat", sans-serif !important;
+      margin-top: 10px !important;
+    }
