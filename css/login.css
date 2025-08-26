@@ -95,11 +95,14 @@ p{
   color: #0a0a0a;
   text-decoration: none;
   max-width: 10rem;
+  font-family: Montserrat; 
+  font-weight: bold; 
+  font-size: 1.2rem;
 }
 
  #btnEnviar {
       border-radius: 31px;
-      background-color: #A9D943;
+      background-color: #d943b9;
       color: #FFFFFF;
       padding: .8rem 3.5rem;
       display: flex;

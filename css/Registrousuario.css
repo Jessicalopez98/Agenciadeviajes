@@ -69,10 +69,13 @@ h1 {
 
     #iniciarSesionBtn {
       border-radius: 31px;
-      border: 2px solid #A9D943;
-      color: black;
+      border: 0.3rem solid #A9D943;
+      color: #27538C;
       padding: .8rem 3.5rem;
       gap: 0.5rem;
+      font-family: Montserrat; 
+      font-weight: bold; 
+      font-size: 1.2rem; 
     }
 
     #iniciarSesionBtn:hover {
@@ -90,6 +93,10 @@ h1 {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: Montserrat; 
+      font-weight: bold; 
+      font-size: 1.2rem; 
+    
     }
 
     #btnEnviar:hover {
@@ -119,3 +126,5 @@ h1 {
       z-index: 0;
       backdrop-filter: blur(7px);
     }
+
+  
