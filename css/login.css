@@ -4,8 +4,8 @@ body{
       background-size: cover;   
       background-position: center; 
       background-repeat: no-repeat; 
-      height: 100vh;  /* 100% del alto de la ventana */
       width: 100vw; 
+      margin: 0;
 }
 
 /* Títulos H1 */
@@ -46,8 +46,6 @@ h1 {
 }
 
 #cuadroLogin{
-    flex-direction: block;
-    grid-template-columns: auto;
     text-align: center;
     width: 20rem;
     height: 28rem;
@@ -76,26 +74,45 @@ p{
     font-family: "Montserrat", sans-serif !important;
     font-size: 20px !important;
     color: #323232 !important;
+  
 
 }
 
 #primerParrafo{
+    text-align: center;
     font-family: "Montserrat", sans-serif !important;
     font-size: 20px !important;
     color: white !important;
 
 
 }
-#textoLogin{
-    padding:15px;
-   
+
+#textoLogin {
+  align-content: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 20rem;
+  height: 10rem;
+  border-color: #3671BF;
+  border-width: 3px;
+  border-style: solid;
+
+
 }
 
 
-#enlaceRegistro{
- font-family: "Montserrat", sans-serif !important;
-    font-size: 20px !important;
-    color: #93e86e !important;
-    font-weight: b;
+#enlaceRegistro {
+  display: flex;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 20px !important;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #0a0a0a;
+  padding: .3rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
 }
 
