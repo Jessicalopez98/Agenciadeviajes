@@ -25,15 +25,23 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
       setTimeout(() => {
       window.location.href = "index.html";
     }, 2000);
-
+// Se estipulan 3 intentos para que el usuario introduzca su contraseña
   } else {
-    intentos++;
-    alertLogin.className = "alert alert-danger";
-    alertLogin.innerHTML = `Correo o contraseña incorrectos. Intento ${intentos} de 3.`;
+   intentos++;
 
-    if (intentos >= 3) {
-      alertLogin.innerHTML += `<br>¿Has olvidado tu contraseña? <a href="./Recuperar.html">Recupérala aquí</a>`;
-    }
+  if (intentos >= 3) {
+    intentos = 3; 
+    alertLogin.className = "alert alert-danger";
+    alertLogin.innerHTML = ` Has superado los 3 intentos.<br>
+      ¿Has olvidado tu contraseña? <a href="./Recuperar.html">Recupérala aquí</a>`;
+  } else {
+    alertLogin.className = "alert alert-warning";
+    alertLogin.innerHTML = `❌ Correo o contraseña incorrectos. Intento ${intentos} de 3.`;
+  }
+
+  // Guardamos el valor actualizado
+  localStorage.setItem("intentosFallidos", intentos);
+
   }
 });
 
