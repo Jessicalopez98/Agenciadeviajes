@@ -3,19 +3,16 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>NAD - Contáctanos</title>
   <link rel="icon" type="image/png" href="./assets/Logo-Nadia_Isotipo.png">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/contactanos.css">
 
-  <!-- Tipografía  -->
+  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -26,51 +23,56 @@
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b093b1a19b.js" crossorigin="anonymous"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init('1cIyeHVyY9IjfALiS');
+  </script>
 </head>
 
 <body>
-
-
   <div class="contact-header">
     <div class="container text-center">
       <h1 class="contact-title">Contáctanos</h1>
     </div>
   </div>
 
-  <!-- Formulario -->
-  <nav>
+  <!-- FORMULARIO -->
+  <form id="form">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm">
           <div class="mb-3">
-            <label for="iptName" class="form-label">Nombre: </label>
-            <input type="text" class="form-control" id="iptName" placeholder="Coloca tu nombre completo">
+            <label for="iptName" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="iptName" name="name" placeholder="Coloca tu nombre completo.">
           </div>
           <div class="mb-3">
-            <label for="iptEmail" class="form-label">Correo Electrónico: </label>
-            <input type="email" class="form-control" id="iptEmail" placeholder="name@example.com">
+            <label for="iptEmail" class="form-label">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="iptEmail" name="email" placeholder="name@example.com">
           </div>
           <div class="mb-3">
-            <label for="iptTelefono" class="form-label">Teléfono: </label>
-            <input type="text" class="form-control" id="iptTelefono" maxlength="10"
-              placeholder="Coloca un número de telefóno válido.">
+            <label for="iptTelefono" class="form-label">Teléfono:</label>
+            <input type="text" class="form-control" id="iptTelefono" name="phone" maxlength="10"
+              placeholder="Coloca un número de teléfono válido.">
           </div>
           <div class="mb-3">
-            <label for="iptMensaje" class="form-label">Mensaje: </label>
-            <input type="text" class="form-control" id="iptMensaje" placeholder="Escribe aunque sea 1 carácter">
+            <label for="iptMensaje" class="form-label">Mensaje:</label>
+            <input type="text" class="form-control" id="iptMensaje" name="message"
+              placeholder="Escribe aquí tu mensaje o comentario.">
           </div>
 
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDefault" id="checkNewsletter">
+            <input class="form-check-input" type="radio" name="newsletter" id="checkNewsletter">
             <label class="form-check-label" for="checkNewsletter">
               Deseo suscribirme al Newsletter.
             </label>
           </div>
 
-          <!-- Botón de enviar -->
+          <!-- Botón -->
           <div class="container mt-3" id="btnEnviar">
-            <button type="button" class="btn btn-light"
-              style="border-radius: 31px; background-color: #A9D943; color: #FFFFFF; font-family: Montserrat; font-weight: bold; font-size: 1.2rem; padding: .8rem 3.5rem; ">
+            <button type="submit" class="btn btn-light" id="button"
+              style="border-radius: 31px; background-color: #A9D943; color: #FFFFFF; font-family: Montserrat; font-weight: bold; font-size: 1.2rem; padding: .8rem 3.5rem;">
               Enviar
             </button>
           </div>
@@ -78,84 +80,42 @@
           <div class="alert alert-danger mt-3" role="alert" id="alertResultado" style="display:none;"></div>
         </div>
 
-        <!-- Enlaces para contacto -->
-        <!-- Enlaces para contacto -->
-        <div class="col-lg-6 col-sm-12 p-4 bg-gradient border-0 rounded-3
-     d-flex flex-column justify-content-center align-items-center text-center">
-
+        <!-- Redes sociales y contacto -->
+        <div class="col-lg-6 col-sm-12 p-4 bg-gradient border-0 rounded-3 d-flex flex-column justify-content-center align-items-center text-center">
           <!-- Correo -->
           <div class="row align-items-center mb-3">
-            <div class="col-auto">
-              <i class="fa-solid fa-envelope fa-lg" style="color: #1b67a1;"></i>
-            </div>
-            <div class="col-auto">
-              <strong>Correo:</strong>
-            </div>
-            <div class="col">
-              <a href="mailto:nadbest@gmail.com">nadbest@gmail.com</a>
-            </div>
+            <div class="col-auto"><i class="fa-solid fa-envelope fa-lg" style="color: #1b67a1;"></i></div>
+            <div class="col-auto"><strong>Correo:</strong></div>
+            <div class="col"><a href="mailto:nadbest@gmail.com">nadbest@gmail.com</a></div>
           </div>
 
           <!-- WhatsApp -->
           <div class="row align-items-center mb-3">
-            <div class="col-auto">
-              <i class="fa-brands fa-whatsapp fa-lg" style="color: #87ad35;"></i>
-            </div>
-            <div class="col-auto">
-              <strong>WhatsApp:</strong>
-            </div>
-            <div class="col">
-              <a href="tel:+525555555555">(+52) 771 34 74 237</a>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <br>
-
-            <br>
+            <div class="col-auto"><i class="fa-brands fa-whatsapp fa-lg" style="color: #87ad35;"></i></div>
+            <div class="col-auto"><strong>WhatsApp:</strong></div>
+            <div class="col"><a href="tel:+525555555555">(+52) 771 34 74 237</a></div>
           </div>
 
-
-          <!-- Redes sociales -->
-          <h5 class="mb-3">Síguenos en nuestras redes sociales:</h5>
-
+          <h5 class="mb-3">Síguenos en nuestras redes sociales y mantente actualizado sobre nuestros viajes:</h5>
           <div class="row align-items-center mb-2">
-
-            <div class="col-auto">
-              <i class="fa-brands fa-instagram fa-lg" style="color: #87ad35;"></i>
-            </div>
-            <div class="col">
-              <a href="https://www.instagram.com/nadbestdreamsvacations/">nadbestdreamsvacations</a>
-            </div>
+            <div class="col-auto"><i class="fa-brands fa-instagram fa-lg" style="color: #87ad35;"></i></div>
+            <div class="col"><a href="https://www.instagram.com/nadbestdreamsvacations/">nadbestdreamsvacations</a></div>
           </div>
-
           <div class="row align-items-center mb-2">
-            <div class="col-auto">
-              <i class="fa-brands fa-facebook fa-lg" style="color: #28538c;"></i>
-            </div>
-            <div class="col">
-              <a
-                href="https://www.facebook.com/people/nadbestdreamsvacations/61562797629424/">nadbestdreamsvacations</a>
-            </div>
+            <div class="col-auto"><i class="fa-brands fa-facebook fa-lg" style="color: #28538c;"></i></div>
+            <div class="col"><a href="https://www.facebook.com/people/nadbestdreamsvacations/61562797629424/">nadbestdreamsvacations</a></div>
           </div>
-
           <div class="row align-items-center mb-2">
-            <div class="col-auto">
-              <i class="fa-brands fa-tiktok fa-lg" style="color: #87ad35;"></i>
-            </div>
-            <div class="col">
-              <a href="https://www.tiktok.com/@nadbestdreamsvacations">nadbestdreamsvacations</a>
-            </div>
+            <div class="col-auto"><i class="fa-brands fa-tiktok fa-lg" style="color: #87ad35;"></i></div>
+            <div class="col"><a href="https://www.tiktok.com/@nadbestdreamsvacations">nadbestdreamsvacations</a></div>
           </div>
-
         </div>
+      </div>
+    </div>
+  </form>
 
-  </nav>
   <footer></footer>
+
   <script src="./JavaScript/main.js" type="module"></script>
   <script src="./JavaScript/headeryfooter.js"></script>
 </body>
