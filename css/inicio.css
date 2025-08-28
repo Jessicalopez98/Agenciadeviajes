@@ -1,14 +1,27 @@
+:root{
+  --brand-blue: #27538C;
+  --brand-lime: #A9D943;
+  --text: #1b1f23;
+  --muted: #6c757d;
+  --card-bg: #ffffff;
+  --card-shadow: 0 6px 20px rgba(0,0,0,.07);
+  --radius: 16px;
+}
+
 body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
       color: #27538C;
     }
 
-h1, h2, h3, h4 {
-      font-family: 'League Spartan', sans-serif;
-      font-weight: 700;
-    }
-
+h1, h2, h5{
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+h2{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}    
 
 .hero {
       background: url('https://res.cloudinary.com/dte9mtmma/image/upload/v1756051242/95e7d963-79dc-46f5-9388-4a128a086b2a_3_iwzhdq.jpg') center/cover no-repeat;
@@ -62,7 +75,117 @@ h1, h2, h3, h4 {
       margin: 40px 0;
     }
 
+/* ====== Barra de búsqueda (fila Origen/Destino/Fechas/Buscar) ====== */
+.row.g-2.justify-content-center .form-control{
+      background-color: white;
+      border-radius: 31px;
+      color: #27538C;
+      text-align: center;
+      padding: .8rem 3.5rem;
+      gap: 0.5rem;
+      font-weight: bold; 
+      font-size: 1.1rem; 
+    }
+
+/* ====== Tarjetas de Servicios ====== */
+.service-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.09);
+}
+.service-icon{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+/* ====== Destinos ====== */
+.destino-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: .5rem;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+}
+.destino-card img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .75rem;
+  object-fit: cover;
+}
+
+/* ====== ¿Por qué elegirnos? ====== */
+.porque-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+}
+.porque-card h5{
+  margin-bottom: .5rem;
+}
+
+/* ====== Testimonios ====== */
+.testimonio-card{
+  background: #f8f9fa;
+  border-left: 4px solid var(--brand-blue);
+  border-radius: .75rem;
+  padding: 1rem 1.25rem;
+  font-style: italic;
+  height: 100%;
+}
+.testimonio-card small{
+  display: inline-block;
+  margin-top: .5rem;
+  font-style: normal;
+  color: var(--muted);
+}
+
+/* ====== CTA final ====== */
+.cta{
+  text-align: center;
+  background: #f4f8ff;
+  border: 1px solid #e8eefb;
+  border-radius: var(--radius);
+  padding: 2.25rem 1.5rem;
+}
+.cta h2{
+  margin: 0;
+  color: var(--brand-blue);
+}
+
+/* ====== Utilidad: imágenes redondeadas dentro de tarjetas ====== */
+.img-fluid.rounded{
+  border-radius: .75rem !important;
+}
+
+
+
+
+/* ====== Responsivo ====== */
+@media (max-width: 576px){
+  .service-icon{ font-size: 1.75rem; }
+  .row.g-2.justify-content-center .form-control,
+  .row.g-2.justify-content-center .btn.btn-success{
+    font-size: 1.05rem;
+  }
+  .btn-primary,
+  .cta .btn.btn-success{
+    font-size: 1.05rem;
+    padding: .7rem 2.2rem;
+  }
+}
     
+
+
 
 #navBar {
   background-color: #27538C !important; /* Azul profundo */
@@ -225,3 +348,50 @@ h1, h2, h3, h4 {
     padding: 8px;       /* reduce padding en móviles */
   }
 }
+
+/*   Botones   */
+
+   #btnBuscar {
+
+      background-color: white;
+      border-radius: 31px;
+      border: 0.3rem solid #A9D943;
+      color: #27538C;
+      padding: .8rem 3.5rem;
+      gap: 0.5rem;
+      font-family: Montserrat; 
+      font-weight: bold; 
+      font-size: 1.2rem; 
+    }
+
+    #btnBuscar:hover {
+      color: white;
+      background-color: #A9D943;
+      font-weight: 700;
+    }
+
+    #btnVerDestinos{
+    background-color: #27538C; 
+    color: white;         
+    font-family: Montserrat; 
+    font-weight: bold;       
+    font-size: 1.2rem;       
+    padding: .8rem 3.5rem;    
+    border-radius: 31px;      
+    }
+    #btnVerDestinos:hover {
+      background-color: #1e4579;
+    }
+
+    #btnCotizarViaje{
+    background-color: #A9D943;
+    color: white; 
+    font-family: Montserrat; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    padding: .8rem 3.5rem; 
+    border-radius: 31px;
+    }
+    #btnCotizarViaje:hover {
+      background-color: #98BF45;
+    }
