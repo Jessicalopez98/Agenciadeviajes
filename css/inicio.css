@@ -225,3 +225,29 @@ h1, h2, h3, h4 {
     padding: 8px;       /* reduce padding en móviles */
   }
 }
+
+/*flecha del carrousel index transparentes*/
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: transparent !important; /* sin fondo */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: transparent !important; /* flecha invisible */
+}
+
+/*imagenes mismo tamaño */
+.swiper {
+  width: 100%;
+  max-width: 1200px;   /* ancho máximo del carrusel */
+  height: 435px;       /* alto fijo del carrusel (ajústalo a tu gusto) */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* recorta la imagen para que todas se vean igual */
+  border-radius: 15px; /* opcional: bordes redondeados */
+}
