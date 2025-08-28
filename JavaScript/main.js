@@ -49,7 +49,7 @@ form.addEventListener("submit", function(event) {
   }
 
   // Cambiar texto del botón durante envío
-  btn.value = "Enviando...";
+  btnEnviar.value = "Enviando...";
 
   // Envío con EmailJS
   const serviceID = "default_service";
@@ -57,7 +57,7 @@ form.addEventListener("submit", function(event) {
 
   emailjs.sendForm(serviceID, templateID, form)
     .then(() => {
-      btn.value = "Enviar";
+      btnEnviar.value = "Enviar";
 
       // Mostrar mensaje de éxito
       alertResultado.style.display = "block";
