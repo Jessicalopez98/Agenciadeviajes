@@ -33,7 +33,7 @@ function addItem(item) {
             '<!-- boton -->\n' +
             '<div class="row">\n' +
             '<div class="card-body" style="display: flex; justify-content: flex-start; align-items: end;">\n' +
-            `<button  style="border-radius: 31px; background-color: #A9D943; color: #FFFFFF; padding: .8rem 3.5rem; font-family: Montserrat; font-weight: bold; font-size: 1.2rem;  " type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
+            `<button id="btnReservar" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal${item.id}">\n` +
             'Reservar\n' +
             '</button>\n' +
             '</div>\n' +
@@ -58,7 +58,7 @@ function addItem(item) {
                   '</div>\n' +
                   '<div class="modal-footer">\n' +
                     '<a href="./contactanos.html">\n' +
-                    '<button type="button" class="btn btn-primary">Contáctanos</button>\n' +
+                    '<button type="button" id="btnContactanos" class="btn btn-primary">Contáctanos</button>\n' +
                     '</a>\n' +
                   '</div>\n' +
               '</div>\n' +

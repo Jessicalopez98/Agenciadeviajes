@@ -436,3 +436,75 @@ border-top-right-radius: 9vw;
 .list-unstyled{
   margin-left:35px;
 }
+
+
+
+
+/*Botones de Productos */
+#btnReservar{
+border-radius: 31px;
+background-color: #A9D943;  /* #27538C */
+color: white;
+padding: .8rem 3.5rem;
+font-family: Montserrat; 
+font-weight: bold; 
+font-size: 1.2rem;
+
+}
+#btnReservar:hover {
+background-color: #9cc446;  /* #27538C */
+}
+
+#btnContactanos{
+background-color: white;
+border-radius: 31px;
+border: 0.3rem solid #A9D943;
+color: #27538C;
+padding: .8rem 3rem;
+gap: 0.5rem;
+font-family: Montserrat; 
+font-weight: bold; 
+font-size: 1.2rem;
+
+}
+#btnContactanos:hover {
+color: white;
+background-color: #A9D943;
+font-weight: 700;
+}
+
+
+/*Boton de Contactanos */
+#btnEnviarCont{
+border-radius: 31px;
+background-color: #A9D943;  /* #27538C */
+color: white;
+padding: .8rem 3.5rem;
+font-family: Montserrat; 
+font-weight: bold; 
+font-size: 1.2rem; 
+
+}
+#btnEnviarCont:hover {
+color: white;
+background-color: #9cc446;
+font-weight: 700;
+}
+
+/* Boton Crear Nuevo Paquete */
+
+#botoncrear{
+border-radius: 31px;
+background-color: #A9D943;  /* #27538C */
+color: white;
+padding: .8rem 3.5rem;
+font-family: Montserrat; 
+font-weight: bold; 
+font-size: 1.2rem; 
+border-color: #A9D943;
+}
+#botoncrear:hover {
+color: white;
+background-color: #9cc446;
+font-weight: 700;
+}  
