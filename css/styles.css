@@ -415,3 +415,24 @@ border-top-right-radius: 9vw;
 }
 
 /* .overlay-text { margin-top: 8px; } */
+
+/*Encabezado de listado paquetes*/
+.thead-azul th {
+  background-color: #27538c !important; /* azul deseado */
+  color: white !important;               /* texto blanco */
+  border-color: #27538c !important;     /* opcional, que los bordes coincidan */
+}
+
+/*Tamaño de la imagen card productos*/
+.fixed-img {
+  width: 100%;       /* ocupa todo el ancho de la card */
+  height: auto;     /* alto fijo, ajusta a tu gusto */
+  object-fit: cover; /* recorta la imagen manteniendo proporción */
+  border-top-left-radius: 15px;  /* opcional si tu card tiene bordes redondeados */
+  border-top-right-radius: 15px;
+}
+
+/*Alineacion texto dias y noches en card productos*/
+.list-unstyled{
+  margin-left:35px;
+}
