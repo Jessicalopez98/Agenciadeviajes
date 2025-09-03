@@ -179,3 +179,7 @@ a {
 .container i{
     text-align: center;
 }
+
+.mb-3{
+    justify-items: center;
+}

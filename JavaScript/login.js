@@ -1,7 +1,5 @@
-let intentos = 0;
-
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Para que no se refesque la página antes
+  event.preventDefault(); // Evita que se recargue la página
 
   const email = document.getElementById("correoLogin").value;
   const password = document.getElementById("contrasenaLogin").value;
@@ -14,34 +12,23 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
   const usuarioEncontrado = usuarios.find(
     u => u.email === email && u.contraseña === password
   );
-
-  if (usuarioEncontrado) {
+if (usuarioEncontrado) {
     alertLogin.className = "alert alert-success";
-    alertLogin.innerHTML = `✅ Bienvenido, ${usuarioEncontrado.nombre}`;
-    intentos = 0; // Reinicia intentos
+    alertLogin.innerHTML = `✅ Bienvenido, ${usuarioEncontrado.nombre}.`;
+
     // Guardar el usuario autenticado como usuarioActivo
     localStorage.setItem("usuarioActivo", JSON.stringify(usuarioEncontrado));
-    //redireccionar a Index una vez inciada sesión
-      setTimeout(() => {
+
+    // Redirigir a index.html
+    setTimeout(() => {
       window.location.href = "index.html";
     }, 2000);
-// Se estipulan 3 intentos para que el usuario introduzca su contraseña
-  } else {
-   intentos++;
 
-  if (intentos >= 3) {
-    intentos = 3; 
+  } else {
     alertLogin.className = "alert alert-danger";
-    alertLogin.innerHTML = ` Has superado los 3 intentos.<br>
-      ¿Has olvidado tu contraseña? <a href="./Recuperar.html">Recupérala aquí</a>`;
-  } else {
-    alertLogin.className = "alert alert-warning";
-    alertLogin.innerHTML = `❌ Correo o contraseña incorrectos. Intento ${intentos} de 3.`;
-  }
-
-  // Guardamos el valor actualizado
-  localStorage.setItem("intentosFallidos", intentos);
-
+    alertLogin.innerHTML = `❌ Correo o contraseña incorrectos.`;
   }
 });
+
+
 

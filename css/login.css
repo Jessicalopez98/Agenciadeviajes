@@ -1,5 +1,6 @@
 
 body{
+   overflow-x: hidden;
     background-image:url(../assets/micky.jpeg);
       background-size: cover;
       background-position: center;
@@ -141,6 +142,7 @@ p{
       border: 3px solid #3671BF;
       padding: 2rem;
       max-height: 11rem;
+    
     }
 
     #contenedorPadre {
