@@ -49,11 +49,17 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
     </div>
   </nav>
   <style>
-
-#navBar {
-  background-image:url(../assets/BannerEncabezado.png);
-  background-size: cover;   
+/* Estilo para el link activo en la navbar */
+#navBar .nav-link.active {
+  border: none !important;              
+  background-color:rgba(0, 0, 0, 0.15) !important; 
+  border-radius: 999px !important;      
+  padding: 6px 16px !important;          
 }
+#navBar {
+ background: linear-gradient(90deg, #27538C, #4CAF50) !important;
+}
+
 /* Texto de los links de la navbar */
 #navBar .nav-link {
   color: #FFFFFF !important;   /* blanco sólido */
@@ -86,39 +92,27 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
   font-optical-sizing: auto;
   gap: 4rem;
 }
-
-/* Estilo general de los links como botones */
-.navbar-nav .nav-link {
-  color: #FFFFFF !important;             /* texto blanco por defecto */
-  padding: 8px 16px;                      /* espacio tipo botón */
-  border-radius: 12px;                     /* esquinas redondeadas */
-  transition: all 0.2s ease;
-}
-
-/* Hover de los botones normales */
-.navbar-nav .nav-link:not(.active):hover {
-  background-color: #A9D943;              /* verde suave al pasar mouse */
-  color: #FFFFFF !important;             /* texto blanco */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-/* Botón activo */
-.navbar-nav .nav-link.active {
-  background-color: #A9D943 !important;  /* verde acento */
-  color: #FFFFFF !important;             /* texto blanco */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* sombra */
-}
-
-/* Hover del botón activo */
-.navbar-nav .nav-link.active:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-  color: #FFFFFF !important;             /* mantener texto blanco */
-}
   </style>`;
 
 const body = document.getElementsByTagName("body").item(0);
 body.insertAdjacentHTML("afterbegin", navbar);
+// --- Marcar link activo según la página ---
+(function marcarActivo() {
+  const here = new URL(location.href);
+  const current = (here.pathname.split("/").pop() || "index.html").toLowerCase();
+
+  document.querySelectorAll("#navBar .nav-link").forEach(a => {
+    const href = (a.getAttribute("href") || "").toLowerCase();
+    if (href.includes(current)) {
+      a.classList.add("active");
+      a.setAttribute("aria-current", "page");
+    } else {
+      a.classList.remove("active");
+      a.removeAttribute("aria-current");
+    }
+  });
+})();
+
 
 
 // -- footer ---
