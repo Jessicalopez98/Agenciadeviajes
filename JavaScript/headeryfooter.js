@@ -17,10 +17,10 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
           <li class="nav-item mx-5" id="acercaNosotras">
             <a class="nav-link text-white fw-medium" href="./Acercadenosotras.html">Acerca de Nosotras</a>
           </li>
-          <li class="nav-item mx-5">
+          <li class="nav-item mx-5" id="listaProductos">
             <a class="nav-link text-white fw-medium" href="./listaProductos.html">Paquetes</a>
           </li>
-          <li class="nav-item mx-5">
+          <li class="nav-item mx-5" id="contactanos">
             <a class="nav-link text-white fw-medium" href="./contactanos.html">Contáctanos</a>
           </li>
         </ul>
@@ -51,7 +51,8 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
   <style>
 
 #navBar {
-  background-color: #27538C !important; /* Azul profundo */
+  background-image:url(../assets/BannerEncabezado.png);
+  background-size: cover;   
 }
 /* Texto de los links de la navbar */
 #navBar .nav-link {
@@ -75,7 +76,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
 }
 
 /* Hover de los botones*/
-#navBar .btn-outline-light:hover {
+  #navBar .btn-outline-light:hover {
   background-color: #FFFFFF !important;
   color: #27538C !important;   /* azul profundo para contraste */
 }
@@ -84,6 +85,35 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   gap: 4rem;
+}
+
+/* Estilo general de los links como botones */
+.navbar-nav .nav-link {
+  color: #FFFFFF !important;             /* texto blanco por defecto */
+  padding: 8px 16px;                      /* espacio tipo botón */
+  border-radius: 12px;                     /* esquinas redondeadas */
+  transition: all 0.2s ease;
+}
+
+/* Hover de los botones normales */
+.navbar-nav .nav-link:not(.active):hover {
+  background-color: #A9D943;              /* verde suave al pasar mouse */
+  color: #FFFFFF !important;             /* texto blanco */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Botón activo */
+.navbar-nav .nav-link.active {
+  background-color: #A9D943 !important;  /* verde acento */
+  color: #FFFFFF !important;             /* texto blanco */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* sombra */
+}
+
+/* Hover del botón activo */
+.navbar-nav .nav-link.active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  color: #FFFFFF !important;             /* mantener texto blanco */
 }
   </style>`;
 
@@ -181,7 +211,8 @@ const piePagina = `
   color: black;
 }
   .footer {
-  background-color: #d9d9d9;
+  background-image:url(../assets/GreenFooter3.png);
+  background-size: cover; 
   color: black;
   padding: 2rem 0;
   margin-top: 2rem;
@@ -299,10 +330,6 @@ const piePagina = `
     padding: 8px;       /* reduce padding en móviles */
   }
 }
-
-
-
-
     </style>
 `
 

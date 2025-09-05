@@ -31,13 +31,16 @@
   </script>
 </head>
 
-<body>
-  <div class="contact-header">
-    <div class="container text-center">
-      <h1 class="contact-title">Contáctanos</h1>
-    </div>
-  </div>
 
+<body>
+ <!-- Header con imagen de fondo -->
+  <section class="contact-header">
+    <div class="container">
+      <h1 class="contact-title">Contáctanos</h1>
+      <!-- Aquí puedes agregar más contenido, botones, etc. -->
+    </div>
+  </section>
+  
   <!-- FORMULARIO -->
   <form id="form">
     <div class="container">
@@ -111,12 +114,35 @@
         </div>
       </div>
     </div>
+
   </form>
 
   <footer></footer>
 
   <script src="./JavaScript/main.js" type="module"></script>
   <script src="./JavaScript/headeryfooter.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener solo el nombre del archivo actual
+  const currentPage = window.location.pathname.split("/").pop(); 
+
+  // Seleccionar todos los links de la navbar
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  navLinks.forEach(link => {
+    // Obtener href del link y limpiar './' si existe
+    let linkHref = link.getAttribute("href");
+    const linkPage = linkHref.replace(/^\.\//, '').split("/").pop();
+
+    // Comparar y activar solo el link correspondiente
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active"); // desactiva los demás
+    }
+  });
+});
+</script>
 </body>
 
 </html>
