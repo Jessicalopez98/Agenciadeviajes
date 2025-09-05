@@ -10,7 +10,7 @@
 
 body {
       font-family: 'Montserrat', sans-serif;
-      background-image: url(https://res.cloudinary.com/dbewlikyu/image/upload/v1757108370/bg__patron_blanco_1_zvm2tj.png);
+      background-image: url(https://res.cloudinary.com/dbewlikyu/image/upload/v1757114409/bg__patron_blanco_2_a0nww6.png);
       color: #27538C;
     }
 
@@ -176,7 +176,7 @@ h2{
 
 /* ====== ¿Por qué elegirnos? ====== */
 .porque-card {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0) !important;
   border-radius: var(--radius) !important;
   padding: 1.25rem !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
