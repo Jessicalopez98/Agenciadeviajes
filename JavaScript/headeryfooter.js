@@ -1,5 +1,6 @@
 const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar" data-bs-theme="dark">
-    <div class="container">
+   <div class="container d-flex align-items-center">
+   
       <!-- Logo-->
        <a href="./index.html">
        <img src="https://res.cloudinary.com/dte9mtmma/image/upload/v1755824177/Logo_Nadia__solo_Isotipo_p55llq.png" alt="NAD Logo" width="70" height="70">
@@ -24,6 +25,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
             <a class="nav-link text-white fw-medium" href="./contactanos.html">Contáctanos</a>
           </li>
         </ul>
+<div class="d-flex gap-2">
 
         <!-- iconos -->
         <div class="d-flex">
@@ -44,6 +46,7 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
           <button class="btn btn-outline-light me-2" type="button" id="cerrarSesion">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 -2v-2" /><path d="M9 12h12l-3 -3m0 6l3 -3" /></svg>
           </button>
+          
         </div>
       </div>
     </div>
@@ -57,7 +60,11 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
   padding: 6px 16px !important;          
 }
 #navBar {
- background: linear-gradient(90deg, #27538C, #4CAF50) !important;
+  background: linear-gradient(90deg, #4caf61ff, #27538C);
+  position: relative; 
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3) !important; 
+  padding: 0.5rem 1rem;
+  z-index: 1050;    
 }
 
 /* Texto de los links de la navbar */
@@ -79,19 +86,19 @@ const navbar = `<nav class="navbar navbar-expand-lg bg-primary px-4" id="navBar"
 /* Hover de los links */
 #navBar .nav-link:hover {
   color: #A9D943 !important;  /* verde suave como acento */
-}
-
-/* Hover de los botones*/
-  #navBar .btn-outline-light:hover {
-  background-color: #FFFFFF !important;
-  color: #27538C !important;   /* azul profundo para contraste */
-}
-  .nav-item {
+} 
+   .nav-item {
   font-size: 25px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   gap: 4rem;
 }
+  #navBar .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important; 
+  color: #FFFFFF !important; 
+  border-color: #FFFFFF !important;
+}
+
   </style>`;
 
 const body = document.getElementsByTagName("body").item(0);
