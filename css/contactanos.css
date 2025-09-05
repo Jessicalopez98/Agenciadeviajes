@@ -112,31 +112,44 @@ a {
   border: 1px solid rgba(152, 191, 69, 0.8);
   color: #000;
 }
-
-/* Reseteamos márgenes y padding del body y html */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* importante para que el body ocupe toda la altura */
+    min-height: 100%;
+    background-image: url('https://res.cloudinary.com/dbewlikyu/image/upload/v1757048995/img__background_contactanos_zdzyl0.png');
+    background-size: cover;           /* cubre todo el contenedor */
+    background-position: center;      /* centra la imagen */
+    background-repeat: no-repeat;     
+    background-attachment: fixed;     /* se mueve al scrollear */
 }
-
-
-/* Diseño header */
 .contact-header {
-  background-image: url(../assets/nabestdreams.jpg);
-  background-size: contain;       /* hace que la imagen ocupe todo el contenedor */
-  background-position: top-center;  /* centra la imagen */
-  background-repeat: no-repeat; /* evita que se repita */
-  width: 100%;                  /* ancho completo */
-  height: 100vh;;                /* altura del header, puedes ajustarla */
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dbewlikyu/image/upload/v1757047232/NadCollageContactanos_h2pu2m.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: clamp(300px, 50vh, 600px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  text-align: center;
 }
+
+.contact-header h1.contact-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(40px, 8vw, 80px); 
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
 
 .image-container {
     width: 100%;       /* ocupa todo el ancho */
     display: flex;
     justify-content: center; /* centra horizontalmente */
     align-items: center;     /* centra verticalmente si es necesario */
-    /*overflow: hidden;        /* recorta cualquier exceso */
 }
 
 .image-container img {
@@ -191,4 +204,27 @@ html, body {
 
 .mb-3{
     justify-items: center;
+}
+@media (max-width: 768px) {
+    .contact-header {
+        min-height: 350px;
+    }
+
+    .contact-header h1.contact-title {
+        font-size: 6vw;
+    }
+
+@media (max-width: 500px) {
+    .contact-header {
+        min-height: 300px;
+    }
+
+    .contact-header h1.contact-title {
+        font-size: 5vw;
+    }
+@media (max-width: 500px) {
+    .contact-header h1.contact-title {
+        font-size: 3rem; 
+        line-height: 1.2; 
+    }
 }
