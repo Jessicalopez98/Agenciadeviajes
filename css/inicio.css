@@ -367,7 +367,7 @@ h2{
 .swiper {
   width: 100%;
   max-width: 1200px;   /* ancho máximo del carrusel */
-  height: 435px;       /* alto fijo del carrusel (ajústalo a tu gusto) */
+  height: 650px;       /* alto fijo del carrusel (ajústalo a tu gusto) */
 }
 
 .swiper-slide img {
