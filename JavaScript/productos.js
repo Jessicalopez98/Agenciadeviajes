@@ -1,8 +1,7 @@
 function addItem(item) {
   const itemHTML = 
   '<div class="col-lg-4 col-md-6 col-12 mb-4 col-sm">\n' +
-              '<article class="card fondo-color-card h-100 shadow-sm"\n' +
-              'style="background-color: #f2f2f2; border-radius:15px ;">\n' +
+              '<article class="card fondo-color-card h-100 shadow-sm">\n' +
               '<div class="card-body">\n' +
               '<h5 class="card-title">' + item.titulo + '</h5>\n' +       
               '<img\n' +
