@@ -6,6 +6,8 @@ import {
   validarLugar,
 } from "./valform.js";
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Botones del HTML
   const botonCrear = document.getElementById("botoncrear");
@@ -93,44 +95,87 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       urlCloudinary = data.secure_url;
       if (!urlCloudinary) throw new Error("No pudimos obtener la URL de Cloudinary");
+
+      //console.log("URL ", urlCloudinary);
+
+      const nuevopaquete = {
+            titulo,
+            imagenUrl:urlCloudinary,
+            precio,
+            lugares:lugar,
+            dias,
+            noches,
+            incluye,
+            noIncluye:noincluye
+          };
+      
+      //console.log("BOdy;",JSON.stringify(nuevopaquete))
+      const response1 = await fetch("http://localhost:8080/api/Productos/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjcmlzdGluYS5sb3BlekBvdXRsb29rLmNvbSIsInJvbGUiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzU3NTQzMTE5LCJleHAiOjE3NTc2Mjk1MTl9.JLRgwhYA9HgxhN1j4HlCA9FZGhqIHlvQ8W1gIzoBzjg"
+        },
+        body: JSON.stringify(nuevopaquete)
+        //redirect: "follow"
+      });
+
+      if (!response1.ok) throw new Error("Error al registrar el paquete");
+
+        //const paqueteGuardado = await response.json();
+
+        // agrega el nuevo paquete directamente a la tabla
+        //agregarPaqueteATabla(paqueteGuardado);
+        //actualizarContadoresPaquetes();
+
+
+        // Se trae lo que ya hay en el localStorage
+        //const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+        // creamos un Id para el nuevo paquete
+        //const nuevoId = nuevopaquete.length + 1;
+        // agregamos el nuevo paquete a la lista
+        //nuevopaquete.push({ id: nuevoId, titulo, precio, lugar, dias, noches, noincluye, incluye, img: urlCloudinary , duracion: `${dias} días | ${noches} noches` });
+        // actualizamos el localStorage con el nuevo paquete
+        //localStorage.setItem("paquetes", JSON.stringify(paquetes));
+
+        //agregarPaqueteATabla({ id: nuevoId, titulo, precio, lugar, dias, noches, img: urlCloudinary });
+        //actualizarContadoresPaquetes();
+        //cargarPaquetesEnTabla();
+
+        // Limpiar campos
+        iptName.value = "";
+        iptPrecio.value = "";
+        iptLugar.value = "";
+        iptDias.value = "";
+        iptNoches.value = "";
+        iptNoIncluye.value = "";
+        iptIncluye.value = "";
+        iptImagen.value = "";
+        preview.innerHTML = "";
+
+        setTimeout(() => {
+          limpiarAlerta();
+          modal.hide();
+          botonguardar.disabled = false; // Reactivar el botón de guardar
+        }, 1000);
+
+
     } catch (error) {
+      console.log("errror", error);
       limpiarAlerta();
       crearAlerta("danger", "Error al subir la imagen a Cloudinary.");
       return;
     }
 
+    
     limpiarAlerta();
     crearAlerta("success", "¡Formulario enviado correctamente!");
 
-    // Se trae lo que ya hay en el localStorage
-    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-    // creamos un Id para el nuevo paquete
-    const nuevoId = paquetes.length + 1;
-    // agregamos el nuevo paquete a la lista
-    paquetes.push({ id: nuevoId, titulo, precio, lugar, dias, noches, noincluye, incluye, img: urlCloudinary , duracion: `${dias} días | ${noches} noches` });
-    // actualizamos el localStorage con el nuevo paquete
-    localStorage.setItem("paquetes", JSON.stringify(paquetes));
 
-    agregarPaqueteATabla({ id: nuevoId, titulo, precio, lugar, dias, noches, img: urlCloudinary });
-    actualizarContadoresPaquetes();
-    cargarPaquetesEnTabla();
 
-    // Limpiar campos
-    iptName.value = "";
-    iptPrecio.value = "";
-    iptLugar.value = "";
-    iptDias.value = "";
-    iptNoches.value = "";
-    iptNoIncluye.value = "";
-    iptIncluye.value = "";
-    iptImagen.value = "";
-    preview.innerHTML = "";
 
-    setTimeout(() => {
-    limpiarAlerta();
-    modal.hide();
-    botonguardar.disabled = false; // Reactivar el botón de guardar
-    }, 1000);
+
+    
   });
 
   document.getElementById("btnCerrar").addEventListener("click", () => {
@@ -147,44 +192,101 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // crea elemento "tr" agrega los td con la informacion y añáde como hijo a la tabla
-  function agregarPaqueteATabla(paquete) {
+  function agregarPaqueteATabla(nuevopaquete) {
+      
     const fila = document.createElement("tr");
+    fila.id = `fila-${nuevopaquete.id}`;
     fila.innerHTML = `
-      <td>${paquete.id}</td>
-      <td>${paquete.titulo}</td>
-      <td>${paquete.precio}</td>
-      <td>${paquete.lugar}</td>
-      <td>${paquete.dias}</td>
-      <td>${paquete.noches}</td>
-      <td><img src="${paquete.img}" style="width:60px; border-radius:6px;"></td>
+      <td>${nuevopaquete.id}</td>
+      <td>${nuevopaquete.titulo}</td>
+      <td>${nuevopaquete.precio}</td>
+      <td>${nuevopaquete.lugares}</td>
+      <td>${nuevopaquete.dias}</td>
+      <td>${ nuevopaquete.noches}</td>
+      <td><img src="${nuevopaquete.imagenUrl}" style="width:60px; border-radius:6px;"></td>
       <td>
         <button class="btn btn-danger rounded-pill px-lg-4"
-            style=" background-color: #d94375 !important; border-color: #d94375;" onclick="eliminarPaquete(${paquete.id})">Eliminar</button>
+            style=" background-color: #d94375 !important; border-color: #d94375;" onclick="eliminarPaquete(${nuevopaquete.id})">Eliminar</button>
       </td>
     `;
     tablaListaPaquetes.appendChild(fila);
   }
 
-  window.eliminarPaquete = function(id) {
-    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-    const nuevosPaquetes = paquetes.filter(paquete => paquete.id !== id);
-    localStorage.setItem("paquetes", JSON.stringify(nuevosPaquetes));
-    cargarPaquetesEnTabla();
-    actualizarContadoresPaquetes();
+  window.eliminarPaquete = async function(id) {
+    if (!confirm("¿Seguro que deseas eliminar este paquete?")) return;
+  try {
+    crearAlerta("info", "Eliminando paquete...");
+    const token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjcmlzdGluYS5sb3BlekBvdXRsb29rLmNvbSIsInJvbGUiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzU3NTQzMTE5LCJleHAiOjE3NTc2Mjk1MTl9.JLRgwhYA9HgxhN1j4HlCA9FZGhqIHlvQ8W1gIzoBzjg"; // <- ajusta aquí si tomas token de localStorage
+    const url = `http://localhost:8080/api/Productos/${id}`; // prueba sin slash final
+
+    const response = await fetch(url, {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        "Authorization": token
+        // No pongas "Content-Type" si no envías body (evita preflight innecesario salvo que uses Authorization)
+      }
+    });
+
+    // debug: imprimir status y cabeceras
+    console.log("DELETE", url, "status:", response.status, response.statusText);
+
+    if (response.ok) {
+      // Si el backend devuelve 204 No Content o 200 OK
+      const fila = document.querySelector(`#fila-${id}`);
+      if (fila) fila.remove();
+      crearAlerta("success", "Paquete eliminado correctamente.");
+      // opcional: recargar la tabla desde el servidor
+      // cargarPaquetesEnTabla();
+      return;
+    }
+
+    // si no ok, intentar leer texto/JSON devuelto por el servidor para mostrar mensaje claro
+    let textoRespuesta = "";
+    try {
+      textoRespuesta = await response.text();
+      console.error("Respuesta del servidor:", textoRespuesta);
+    } catch (e) {
+      console.error("No se pudo leer body de la respuesta");
+    }
+
+    // Mensajes específicos según status
+    if (response.status === 404) {
+      crearAlerta("danger", "Paquete no encontrado (404).");
+    } else if (response.status === 401 || response.status === 403) {
+      crearAlerta("danger", "No autorizado. Revisa el token o permisos (401/403).");
+    } else if (response.status === 405) {
+      crearAlerta("danger", "Método no permitido en el servidor (405).");
+    } else {
+      crearAlerta("danger", `Error al eliminar: ${response.status} ${response.statusText}. ${textoRespuesta}`);
+    }
+
+  } catch (error) {
+    console.error("Error de red o CORS:", error);
+    crearAlerta("danger", "Error de red o CORS. Revisa la consola y la pestaña Network.");
   }
+  };
 
   // saca los paquetes del local storage mira el ".length" y lo asigna a las tarjetas
-  function actualizarContadoresPaquetes() {
-    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-    const total = paquetes.length;
+  function actualizarContadoresPaquetes(paquetes) {
+    console.log("paquetes; ", paquetes)
+    //const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+    const total = paquetes.length??0;
     cardTotalPaquetes.textContent = total;
     cardPaquetesActivos.textContent = total;
   }
   // extrae los datos del local storage, vacia la tabla y luego los agrega
   function cargarPaquetesEnTabla() {
-    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-    tablaListaPaquetes.innerHTML = "";
-    paquetes.forEach(paquete => agregarPaqueteATabla(paquete));
+   fetch("http://localhost:8080/api/Productos/", {
+  method: "GET",
+  redirect: "follow"
+})
+  .then((response) => response.json())
+  .then((result) => { result.forEach(p=>agregarPaqueteATabla(p))
+  })
+  .catch((error) => console.error(error));
+    //tablaListaPaquetes.innerHTML = "";
+    //paquetes.forEach(paquete => agregarPaqueteATabla(paquete));
   }
 
   // pasa el display a none y quita las clases si las tenia, y el contenido
@@ -226,8 +328,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Actualiza los contadores de paquetes al entrar a la web
-  actualizarContadoresPaquetes();
+  actualizarContadoresPaquetes([]);
 
   // Carga los paquetes en la tabla al ingresar al sitio
   cargarPaquetesEnTabla();
+  
 });

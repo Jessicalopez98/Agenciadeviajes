@@ -1,3 +1,13 @@
+const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
+
+fetch("http://localhost:8080/api/Productos/", requestOptions)
+  .then((response) => response.json())
+  .then((result) => { result.forEach(p=>addItem(p))
+  })
+  .catch((error) => console.error(error));
 function addItem(item) {
   const itemHTML = 
   '<div class="col-lg-4 col-md-6 col-12 mb-4 col-sm">\n' +
@@ -5,7 +15,7 @@ function addItem(item) {
               '<div class="card-body">\n' +
               '<h5 class="card-title">' + item.titulo + '</h5>\n' +       
               '<img\n' +
-              'src="' + item.img + '"\n' +
+              'src="' + item.imagenUrl + '"\n' +
               'class="card-img-top fixed-img" alt="Imagen de destino">\n' +
               '<h5 class="card-title" style="font-size:1.4rem"><p>Desde $' + item.precio + ' USD por persona en habitación doble + IMP </p></h5> <!--aqui-->\n' +
   
@@ -99,4 +109,4 @@ function cargarPaquetes() {
     .catch(error => console.error("Error al cargar los paquetes:", error));
 }
 
-cargarPaquetes();
+//cargarPaquetes();
